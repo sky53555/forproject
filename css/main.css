@@ -8,54 +8,87 @@
 }
 
 /*header*/
-a:link,
-a:visited{
+header{
+	width:100%;
+	height:150px;
+	font-size:16px;
+	position:relative;
+}
+
+#hwraper{
+	width:80%;
+}
+
+#hwraper ul a:link,
+#hwraper ul a:visited{
 	color:#000;
 	text-decoration: none;
+
 }
-a:hover{
+#hwraper ul a:hover{
 	border-bottom:3px solid orange;
 	font-weight: bold;
 }
-header{
 
-	height:150px;
-	position:relative;
-}
-header #logo{
+#hwraper #logo{
 	position:absolute;
-	top:-5%;
+	top:10%;
 	left:5%;
 }
 
+#hwraper .search{
+	position:absolute;
+	top:15%;
+	right:4%;
+	cursor: pointer;
+}
+#hwraper .searchbox{
+	display:none;
+	
+}
 
+#hwraper .search input{
+	width:200px;
+	height:30px;
+	border-radius: 10px;
+	outline: none;
+	
+}
+
+
+#hwraper .icon{
+	cursor: pointer;
+}
+ 
 #logo img{
 	width:120px;
 }
 
-
-header ul{
+#hwraper ul{
 	position:absolute;
 	right:15%;
-	top:70px;
+	top:60%;
 }
-header li{
+
+#hwraper li{
 	float:left;
 	display:block;
 	padding-right:50px;
 	font-family: 'Poiret One', cursive;
-	font-size: 20px;
+	font-size: 1.3rem;
 	letter-spacing: 2px;
 }
 
-header #icon{
+#hwraper #icon{
 	position:absolute;
 	right:3%;
-	top:70px;
+	top:55%;
 }
-header btn{
 
+#hwraper #icon i{
+	padding-right:10px;
 }
+
 
 /*section*/
 section{
@@ -67,5 +100,67 @@ section{
 /*footer*/
 footer{
 	height:170px;
-	background-color: #eee;
+	position:relative;
+}
+
+footer #fwarper{
+	width:60%;
+	margin:0 auto;
+	
+}
+
+#fwarper #lists{
+	width:500px;
+	float:left;
+	margin-top:10%;
+	
+}
+
+#fwarper li{
+	float:left;
+
+}
+#fwarper li a{
+	display:block;
+	padding-right:20px;
+	color:#656668;
+	text-decoration: none;
+	letter-spacing: 1.5px;
+	font-size: 0.7rem;
+	transition:all 0.3s;
+
+}
+
+#fwarper li a:hover{
+	text-decoration: none;
+	font-weight: bold;
+
+}
+
+#fwarper #btn{
+	width:250px;
+	text-align:center;
+	float:right;
+	margin-top:5%;
+
+}
+#fwarper #btn p{
+
+	text-align: right;
+	padding-top:15px;
+
+
+}
+
+#fwarper #btn p a{
+	letter-spacing: 2px;
+	text-decoration: none;
+	color:#656668;
+	transition:all 0.3s;
+
+}
+
+#fwarper #btn p a:hover{
+	color:#000;
+	font-weight: bold;
 }
