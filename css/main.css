@@ -1,0 +1,71 @@
+
+/*전체*/
+*{
+	padding:0;
+	margin:0;
+	list-style:none;
+
+}
+
+/*header*/
+a:link,
+a:visited{
+	color:#000;
+	text-decoration: none;
+}
+a:hover{
+	border-bottom:3px solid orange;
+	font-weight: bold;
+}
+header{
+
+	height:150px;
+	position:relative;
+}
+header #logo{
+	position:absolute;
+	top:-5%;
+	left:5%;
+}
+
+
+#logo img{
+	width:120px;
+}
+
+
+header ul{
+	position:absolute;
+	right:15%;
+	top:70px;
+}
+header li{
+	float:left;
+	display:block;
+	padding-right:50px;
+	font-family: 'Poiret One', cursive;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+header #icon{
+	position:absolute;
+	right:3%;
+	top:70px;
+}
+header btn{
+
+}
+
+/*section*/
+section{
+	height:80vh;
+	background-color: lightyellow;
+}
+
+
+/*footer*/
+footer{
+	height:170px;
+	background-color: #eee;
+}
