@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.sub-menu{
+  height: 150px;
+}
+.sub-menu-title{
+  font-size: 40px;
+}
+#sub-menu-image{
+  max-height: 100%;
+}
+.grid-list-item{
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.grid-list-item-image{
+  margin-bottom: 10px;
+}
+.item-image{
+  max-width: 100%;
+}
+.item-shadow{
+  box-shadow: 15px 15px 15px 0 #cecece;
+}
+.item-title1{
+  font-size:15px;
+  font-weight: bold;
+}
+.item-title2{
+  font-size:12px;
+}
+.item-price{
+  float: right;
+  font-size:10px;
+  font-weight: bold;
+  margin-left:10px;
+}
