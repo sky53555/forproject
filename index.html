@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="css/main.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
 
@@ -46,10 +48,22 @@
 		</div>
 	</header>
 
-	<!--carousel-->
-	<section>
-		carousel
-	</section>
+<section class="container">
+	<div class="row">
+		<div class="col-xs-6 img_area">
+			<img src="image/index/02.jpg" alt="">
+		</div>
+		<div class="col-xs-6 ment_area">
+			<img src="image/index/hotSummer.png" alt="">
+		</div>
+		<div class="showD_left showDetails">
+			<img src="image/index/right-arrow.png" alt="">&nbsp;<span class="glyphicon glyphicon-heart"></span>
+		</div>
+		<div class="showD_right showDetails">
+			<b>Show Details&nbsp;</b><span class="glyphicon glyphicon-heart"></span>
+		</div>
+	</div>
+</section>
 
 	<!--footer-->
 	<footer>
@@ -86,6 +100,26 @@ $(document).ready(function() {
              });
  
         });
+	$(".img_area").fadeIn({
+		duration:1500,
+		complete:function(){
+			$(this).children().addClass("animated slideInLeft").fadeIn(function(){
+				$(".ment_area>img").fadeIn(1000,function(){
+					$(".showDetails").css("display","flex").addClass("animated slideInLeft");
+				}).addClass("animated slideInRight");
+			});
+		}
+	});
+	
+	$(".showDetails").mouseover(function(){
+		$(".showD_left>span").css("color","black");
+		$(".showD_right>span").css("color","white");
+	})
+	$(".showDetails").mouseout(function(){
+		$(".showD_left>span").css("color","white");
+		$(".showD_right>span").css("color","black");
+	})
+		
 </script>
 </body>
 </html>

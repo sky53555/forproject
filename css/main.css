@@ -97,7 +97,7 @@ header{
 /*section*/
 section{
 	height:80vh;
-	background-color: lightyellow;
+	/*background-color: lightyellow;*/
 }
 
 
@@ -167,4 +167,74 @@ footer #fwarper{
 #fwarper #btn p a:hover{
 	color:#000;
 	font-weight: bold;
+	background-color: #eee;
+}
+
+.row{
+	position: relative;
+}
+
+.img_area{
+	padding: 0 !important;
+	background-color: rgb(249,234,206);
+	overflow: hidden;
+	display: none;
+	height: 700px;
+}
+.img_area>img{
+	display: none;
+	max-width: 100%;
+}
+
+.ment_area>img{
+	display: none;
+	position: absolute;
+	right: 170px;
+}
+
+.showD_left:hover, .showD_right:hover{
+	cursor: pointer;
+}
+
+.showDetails{
+	font-family: 'Poiret One', cursive;
+	text-align: center;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+.showDetails>img{
+	width: 20px;
+}
+
+.showD_left{
+	font-weight: bold;
+	text-align: right;
+	position: absolute;
+	justify-content: flex-end;
+	top: 350px;
+	left: 425px;
+	width: 100px;
+	height: 50px;
+	background-color: black;
+	color: white;	
+}
+
+.showD_right{
+	position: absolute;
+	top: 350px;
+	left: 525px;
+	width: 200px;
+	height: 50px;
+	background-color: black;
+	color: white;
+}
+.showD_right>span{
+	color: black;
+}
+
+.show_ment{
+	color: white;
 }
