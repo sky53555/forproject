@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css"/>
 	<link rel="stylesheet" href="css/main.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css"/>
 </head>
 <body>
 
@@ -39,8 +40,35 @@
 
 <!--carousel-->
 <section>
-	carousel
+
+	<div id="box01" class="row">
+		<div id="box01_imgbox" class="col-xs-8">
+			<img id="img01" src="image/etc/summer01.jpg"/>
+		</div>
+		<div id="box01_textbox" class="col-xs-5 col-xs-push-7">
+			<div id=box01_text>
+				SUMMER
+				<br>ITEM
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="box02" class="row">
+		<div id="box02_imgbox" class="col-xs-8">
+			<img id="img02" src="image/etc/summer01.jpg"/>
+		</div>
+		<div id="box02_textbox" class="col-xs-5 col-xs-push-7">
+			<div id=box02_text>
+				SUMMER
+				<br>ITEM
+				</span>
+			</div>
+		</div>
+	</div>
+	
 </section>
+
 
 <!--footer-->
 <footer>
@@ -60,7 +88,22 @@
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>	
 <script>
-	
+	$(function(){
+			 $("#box01_imgbox").fadeIn("1000" ,function(){
+			 	$("#img01")
+			 	.show()
+			 	.addClass("animated slideInLeft")
+			 	.one("animationend",function(){
+			 		$("#box01_textbox")
+			 		.fadeIn("1000",function(){
+			 			$("#box01_text")
+			 			.show()
+			 			.addClass("animated slideInRight")
+			 		});
+
+			 	});
+			 });
+	});
 </script>
 </body>
 </html>

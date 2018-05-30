@@ -59,10 +59,83 @@ header btn{
 
 /*section*/
 section{
-	height:80vh;
+	height:3000vh;
 	background-color: lightyellow;
+	position: relative;
+	background-color: white;
+}
+#box01{
+	margin-top: 0;
+	max-width: 100%;
+	height: 1000px;
+}
+#box01_imgbox{	
+		height:600px;
+		max-width: 100%;
+		position: absolute;
+		overflow: hidden;
+		padding: 0;
+		background-color: lightyellow;
+		display: none;	
+	}
+#img01{
+		max-width: 100%;
+		display: none;
+}
+#box01_textbox{
+		font-color: block;
+		box-shadow:5px 10px 20px 2px #eeeeee;
+		position: absolute;
+		max-width: 100%;
+		height: 480px;
+		background-color: white;
+		display: none;
+	}
+#box01_text{	
+	margin-left: -60px;
+	font-family: 'Poiret One', cursive;
+	font-size: 90px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	display: none;
 }
 
+////
+
+#box02{
+	position: absolute;
+	margin-top: 1300px;
+}
+#box02_imgbox{	
+		height:600px;
+		max-width: 100%;
+		position: absolute;
+		overflow: hidden;
+		padding: 0;
+		background-color: lightyellow;
+		/*display: none;	*/
+	}
+#img02{
+		max-width: 100%;
+		/*display: none;*/
+}
+#box02_textbox{
+		font-color: block;
+		box-shadow:5px 10px 20px 2px #eeeeee;
+		position: absolute;
+		max-width: 100%;
+		height: 480px;
+		background-color: white;
+		/*display: none;*/
+	}
+#box02_text{	
+	margin-left: -60px;
+	font-family: 'Poiret One', cursive;
+	font-size: 90px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	/*display: none;*/
+}
 
 /*footer*/
 footer{
