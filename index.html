@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css"/>
 	<link rel="stylesheet" href="css/main.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
 
@@ -38,8 +39,23 @@
 	</header>
 
 <!--carousel-->
-<section>
-	carousel
+<section class="container">
+	<div class="row">
+		<div class="col-xs-6 img_area">
+			<img src="image/index/02.jpg" alt="">
+		</div>
+		<div class="col-xs-6 ment_area">
+			<img src="image/index/hotSummer.png" alt="">
+		</div>
+		<div class="showD_left showDetails">
+			<img src="image/index/right-arrow.png" alt=""><span>♥</span>
+		</div>
+		<div class="showD_right showDetails">
+			<b>Show Details</b><span>♥</span>
+		</div>
+		</div>
+		
+	</div>
 </section>
 
 <!--footer-->
@@ -60,7 +76,30 @@
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>	
 <script>
+	$(".img_area").fadeIn({
+		duration:1500,
+		complete:function(){
+			$(this).children().addClass("animated slideInLeft").fadeIn(function(){
+				$(".ment_area>img").fadeIn(1000,function(){
+					$(".showDetails").css("display","flex").addClass("animated slideInLeft");
+				}).addClass("animated slideInRight");
+			});
+		}
+	});
 	
+	$(".showDetails").mouseover(function(){
+		$(".showD_right").addClass("color_change");
+		$(".showD_left>span").css("color","black");
+		$(".showD_right>span").css("color","white");
+	})
+	$(".showDetails").mouseout(function(){
+		$(".showD_right").removeClass("color_change");
+		$(".showD_left>span").css("color","white");
+		$(".showD_right>span").css("color","black");
+	})
+		
+	
+
 </script>
 </body>
 </html>
