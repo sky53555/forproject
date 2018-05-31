@@ -55,6 +55,7 @@
 	</header>
 
 <div class="container">
+	<!-- 첫 번째 이미지 -->
 	<div class="row" id="first">
 		<div class="col-xs-6 img_area">
 			<img src="image/index/01.jpg">
@@ -69,7 +70,9 @@
 			<b>SHOW DETAILS&nbsp;</b>&nbsp;<span class="glyphicon glyphicon-heart" style="color: black;"></span>
 		</div>
 	</div>
+	<!-- 공백 -->
 	<div class="spacer"></div>
+	<!-- 두 번째 이미지 -->
 	<div class="row" id="second">
 		<div class="col-xs-6 ment_area">
 			<img src="image/index/specialSale.png">
@@ -84,7 +87,9 @@
 			<b>SHOW DETAILS&nbsp;</b>&nbsp;<span class="glyphicon glyphicon-heart" style="color: black;"></span>
 		</div>
 	</div>
+	<!-- 공백 -->
 	<div class="spacer"></div>
+	<!-- 세 번째 이미지 -->
 	<div class="row" id="third">
 		<div class="col-xs-6 img_area">
 			<img src="image/index/03.png">
@@ -149,20 +154,11 @@
 
 	})
 
+	// 이미지 div의 아이디를 담은 배열
+	var imagesId=["#first","#second","#third"];
+	var idx=0;
 	// 출력해보기
-		$("#first").show(function(){
-			$(this).children(".img_area").fadeIn({
-			duration:1500,
-			complete:function(){
-				$(this).children().addClass("animated slideInLeft").fadeIn(function(){
-					$(".ment_area").fadeIn(1000,function(){
-						$(".showDetails").css("display","flex").addClass("animated slideInLeft");
-					}).addClass("animated slideInRight");
-				});
-			}
-			});
-		});
-
+	imagesAni($("#first"));
 	$(window).on("scroll", function(){
 		// 위쪽으로 스크롤 된 길이 구하기
 		var scrollTop=$(window).scrollTop();
@@ -174,22 +170,16 @@
 		var movedHeight = scrollTop+windowHeight;
 		$("#wHeight").text("총 이동 스크롤 길이:"+movedHeight);
 		if(movedHeight>=1000){
-			$("#second").show(function(){
-			$(this).children(".img_area").fadeIn({
-				duration:1500,
-				complete:function(){
-					$(this).children().addClass("animated slideInLeft").fadeIn(function(){
-						$(".ment_area").fadeIn(1000,function(){
-							$(".showDetails").css("display","flex").addClass("animated slideInLeft");
-						}).addClass("animated slideInRight");
-					});
-				}
-				});
-			});
+			imagesAni($("#second"));
 		}
 		if(movedHeight>=1800){
-			$("#third").show(function(){
-			$(this).children(".img_area").fadeIn({
+			imagesAni($("#third"));
+		};
+	});
+
+	function imagesAni($input){
+		$input.show(function(){
+			$input.children(".img_area").fadeIn({
 				duration:1500,
 				complete:function(){
 					$(this).children().addClass("animated slideInLeft").fadeIn(function(){
@@ -199,9 +189,8 @@
 					});
 				}
 			});
-			});
-		};
-	});
+		});	
+	};
 </script>
 </body>
 </html>
