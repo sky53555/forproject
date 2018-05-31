@@ -1,0 +1,79 @@
+
+.container {
+  	padding-right: 15px;
+ 	padding-left: 15px;
+ 	margin-right: auto;
+  	margin-left: auto;
+}
+.bt-connect.bt-twitter {
+	background-color: #25B6E6;
+}
+.bt-connect.bt-facebook {
+	background-color: #325595;
+}
+.bt-connect.bt-email {
+	background-color: #49c5b6;
+}
+.bt-connect {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    max-width: 100%;
+    height: 70px;
+    padding: 0 50px 0 35px;
+    line-height: 70px;
+    font-size: 17px;
+    background-color: #BDC1C0;
+    text-align: left;
+    color: #fff !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+	}
+.heading-xx-medium {
+    font-size: 32px;
+    font-weight: bold;
+}
+.box-login {		   
+    min-height: 390px;
+    text-align: center;
+    padding: 50px;
+}
+.box-login .header {
+    margin-bottom: 35px;
+}
+.box-lightbox .box-content-login {
+    width: 650px;
+}
+.bt-connect .ico-svg {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    width: 20px;
+    fill: #fff;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.box-login p {
+    margin-bottom: 20px;
+}
+.right{
+	float:right;
+	padding-top: 25px;
+}
+a{
+	text-decoration: none;
+}
+a.js-register {
+    color: #49c5b6;
+    text-decoration: none;
+    -webkit-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+.heading-small {
+    font-size: 19px;
+    font-weight: bold;
+}
