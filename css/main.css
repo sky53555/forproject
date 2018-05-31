@@ -171,6 +171,7 @@ footer #fwarper{
 }
 
 .row{
+	display: none;
 	position: relative;
 }
 
@@ -248,8 +249,4 @@ footer #fwarper{
 
 .spacer{
 	height: 150px;
-}
-
-#second, #third{
-	display: none;
 }

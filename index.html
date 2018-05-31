@@ -70,7 +70,7 @@
 		</div>
 	</div>
 	<div class="spacer"></div>
-	<div class="row" id="first">
+	<div class="row" id="second">
 		<div class="col-xs-6 ment_area">
 			<img src="image/index/specialSale.png">
 		</div>
@@ -85,7 +85,7 @@
 		</div>
 	</div>
 	<div class="spacer"></div>
-	<div class="row" id="first">
+	<div class="row" id="third">
 		<div class="col-xs-6 img_area">
 			<img src="image/index/03.png">
 		</div>
@@ -150,7 +150,8 @@
 	})
 
 	// 출력해보기
-		$("#first>.img_area").fadeIn({
+		$("#first").show(function(){
+			$(this).children(".img_area").fadeIn({
 			duration:1500,
 			complete:function(){
 				$(this).children().addClass("animated slideInLeft").fadeIn(function(){
@@ -159,6 +160,7 @@
 					}).addClass("animated slideInRight");
 				});
 			}
+			});
 		});
 
 	$(window).on("scroll", function(){
@@ -166,36 +168,38 @@
 		var scrollTop=$(window).scrollTop();
 		// window의 높이
 		var windowHeight=$(window).height();
-		// $("#sTop").text("scrollTop:"+scrollTop);
-		// $("#wHeight").text("windowHeight:"+windowHeight);
+		$("#sTop").text("scrollTop:"+scrollTop);
+		$("#wHeight").text("windowHeight:"+windowHeight);
 	
 		var movedHeight = scrollTop+windowHeight;
-		// $("#wHeight").text("총 이동 스크롤 길이:"+movedHeight);
-		// scrollTop이 200일 때 2번째 이미지를 보여줌
+		$("#wHeight").text("총 이동 스크롤 길이:"+movedHeight);
 		if(movedHeight>=1000){
-			console.log("2번째 이미지");
-			$("#second>.img_area").fadeIn({
-			duration:1500,
-			complete:function(){
-				$(this).children().addClass("animated slideInLeft").fadeIn(function(){
-					$(".ment_area").fadeIn(1000,function(){
-						$(".showDetails").css("display","flex").addClass("animated slideInLeft");
-					}).addClass("animated slideInRight");
+			$("#second").show(function(){
+			$(this).children(".img_area").fadeIn({
+				duration:1500,
+				complete:function(){
+					$(this).children().addClass("animated slideInLeft").fadeIn(function(){
+						$(".ment_area").fadeIn(1000,function(){
+							$(".showDetails").css("display","flex").addClass("animated slideInLeft");
+						}).addClass("animated slideInRight");
+					});
+				}
 				});
-			}
-		});
+			});
 		}
 		if(movedHeight>=1800){
-			$("#third>.img_area").fadeIn({
-			duration:1500,
-			complete:function(){
-				$(this).children().addClass("animated slideInLeft").fadeIn(function(){
-					$(".ment_area").fadeIn(1000,function(){
-						$(".showDetails").css("display","flex").addClass("animated slideInLeft");
-					}).addClass("animated slideInRight");
-				});
-			}
-		});
+			$("#third").show(function(){
+			$(this).children(".img_area").fadeIn({
+				duration:1500,
+				complete:function(){
+					$(this).children().addClass("animated slideInLeft").fadeIn(function(){
+						$(".ment_area").fadeIn(1000,function(){
+							$(".showDetails").css("display","flex").addClass("animated slideInLeft");
+						}).addClass("animated slideInRight");
+					});
+				}
+			});
+			});
 		};
 	});
 </script>
