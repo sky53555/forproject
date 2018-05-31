@@ -32,7 +32,7 @@
 			<div class="search" style="font-size:1.7em; color:Tomato">
 				
 				<span class="searchbox">	
-			    <input type="search" placeholder="Search..." />
+			    <input type="text" placeholder="Search..." />
 				</span>
 				<i class="fa fa-search"></i>
 				
@@ -80,8 +80,10 @@
 
 $(document).ready(function() {
      		
-            $(".search").click(function() {
+            $(".fa-search").click(function() {
+            	console.log("ddd");
                $(".searchbox").toggle();
+               $("input[type='text']").val("");
                $("input[type='text']").focus();
              });
  

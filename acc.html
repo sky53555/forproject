@@ -6,51 +6,60 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>ACC</title>
 	<link rel="stylesheet" href="css/bootstrap.css"/>
-	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css"/>
 	<link rel="stylesheet" href="css/sub.css"/>
-	<link rel="stylesheet" href="css/animate.css">
 </head>
 <body>
-<!--navi-->
-<header>
-	<h1 id="logo"><a href="index.html"><img src="image/etc/logo.png" alt=""></a></h1>
+<!--header-->
+	<header>
+		<div id="hwraper">
 
-	<ul>
-		<li><a href="outer.html">OUTER</a></li>
-		<li><a href="top.html">TOP</a></li>
-		<li><a href="bottom.html">BOTTOM</a></li>
-		<li><a href="acc.html">ACC</a></li>
-		<li><a href="shoes.html">SHOES</a></li>
-		<button type="button" class="btn btn-default">
-		<span class="glyphicon glyphicon-search align-right"></span>
-		</button>
-	</ul>
-	<div id="icon">	
-		<button type="button" class="btn btn-default">
-		<span class="glyphicon glyphicon-heart-empty"></span></button>
-		<span><a href="login.html">LOG IN</a></span>
-	</div>
-</header>
+			<h1 id="logo">
+			<a href="index.html"><img src="image/etc/logo.png" alt="logo"></a>
+			</h1>
+
+			<ul>
+				<li><a href="outer.html">OUTER</a></li>
+				<li><a href="top.html">TOP</a></li>
+				<li><a href="bottom.html">BOTTOM</a></li>
+				<li><a href="acc.html">ACC</a></li>
+				<li><a href="shoes.html">SHOES</a></li>
+				
+			</ul>
+			
+			<div class="search" style="font-size:1.7em; color:Tomato">
+				
+				<span class="searchbox">	
+			    <input type="search" placeholder="Search..." />
+				</span>
+				<i class="fa fa-search"></i>
+				
+			</div>
+
+			<div id="icon" style="font-size:1.5em;">	
+				<a href="#"><i class="far fa-heart"></i></a>
+				<a href="#"><i class="far fa-user-circle"></i></a>
+			</div>
+
+		</div>
+	</header>
 
 <!--container-->
 <div class="container">
 	<!--글과 그림 애니메이션-->
-	<div class="row">
-		<div class="col-xs-6">
-			<p class="animated bounceInLeft sub-menu-title">ACC</p>	
-		</div>
-		<div class="col-xs-6 sub-menu">
-			<img id="sub-menu-image" class="animated">
-		</div>	
+	<div class="row sub-menu">
+		<img id="sub-menu-image" src="image/acc/00.jpg">
+		<div class="sub-menu-title">ACC</div>		
 	</div>
-		
+	<div class="clearfix"></div>
 	<!--상품-->
 	<div class="list">		
 		<!-- 1 행 -->
 		<div class="row">
 			<div class="col-xs-6 col-sm-3">			
-				<div class="grid-list-item">
+				<div class="grid-list-item grid-list-item-view1">
 					<a href="#">
 						<div class="grid-list-item-image">
 							<img class="item-image">
@@ -64,7 +73,7 @@
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-3">			
-				<div class="grid-list-item">
+				<div class="grid-list-item grid-list-item-view2">
 					<a href="#">
 						<div class="grid-list-item-image">
 							<img class="item-image">
@@ -78,7 +87,7 @@
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-3">			
-				<div class="grid-list-item">
+				<div class="grid-list-item grid-list-item-view3">
 					<a href="#">
 						<div class="grid-list-item-image">
 							<img class="item-image">
@@ -92,7 +101,7 @@
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-3">			
-				<div class="grid-list-item">
+				<div class="grid-list-item grid-list-item-view4">
 					<a href="#">
 						<div class="grid-list-item-image">
 							<img class="item-image">
@@ -110,7 +119,7 @@
 		<!-- 2 행 -->
 		<div class="row">
 			<div class="col-xs-6 col-sm-3">			
-				<div class="grid-list-item">
+				<div class="grid-list-item grid-list-item-view1">
 					<a href="#">
 						<div class="grid-list-item-image">
 							<img class="item-image">
@@ -124,7 +133,7 @@
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-3">			
-				<div class="grid-list-item">
+				<div class="grid-list-item grid-list-item-view2">
 					<a href="#">
 						<div class="grid-list-item-image">
 							<img class="item-image">
@@ -138,7 +147,7 @@
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-3">			
-				<div class="grid-list-item">
+				<div class="grid-list-item grid-list-item-view3">
 					<a href="#">
 						<div class="grid-list-item-image">
 							<img class="item-image">
@@ -152,7 +161,7 @@
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-3">			
-				<div class="grid-list-item">
+				<div class="grid-list-item grid-list-item-view4">
 					<a href="#">
 						<div class="grid-list-item-image">
 							<img class="item-image">
@@ -170,7 +179,7 @@
 		<!-- 3 행 -->
 		<div class="row">
 			<div class="col-xs-6 col-sm-3">			
-				<div class="grid-list-item">
+				<div class="grid-list-item grid-list-item-view1">
 					<a href="#">
 						<div class="grid-list-item-image">
 							<img class="item-image">
@@ -184,7 +193,7 @@
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-3">			
-				<div class="grid-list-item">
+				<div class="grid-list-item grid-list-item-view2">
 					<a href="#">
 						<div class="grid-list-item-image">
 							<img class="item-image">
@@ -198,7 +207,7 @@
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-3">			
-				<div class="grid-list-item">
+				<div class="grid-list-item grid-list-item-view3">
 					<a href="#">
 						<div class="grid-list-item-image">
 							<img class="item-image">
@@ -212,7 +221,7 @@
 				</div>
 			</div>
 			<div class="col-xs-6 col-sm-3">			
-				<div class="grid-list-item">
+				<div class="grid-list-item grid-list-item-view4">
 					<a href="#">
 						<div class="grid-list-item-image">
 							<img class="item-image">
@@ -250,10 +259,14 @@
 		{title1:"Wool Socks Camel",			title2:"CAP Studio",				price:"15,000원"},
 		{title1:"Logo Socks",				title2:"Paco Rabanne",				price:"18,000원"} ];
 
-	$(".sub-menu-title").one("animationend", function(){
-		// 애니메이션이 끝났을 때 클래스 제거하기
-		$("#sub-menu-image").attr("src", "image/acc/01.jpg").addClass("bounceInRight");
-	});
+	//$(".sub-menu-title").hide();
+	$("#sub-menu-image")
+	.hide()
+	.css("margin-left", "45%")
+	.fadeIn()
+	.one("transitionend", function(){
+	 	$(".sub-menu-title").css("left", "40%").fadeIn();
+	 });
 
 	var imageLoad=[false, false, false];
 	showItem(0);
@@ -280,40 +293,50 @@
 			var obj=itemInfo[i];
 			$($(".grid-list-item-info")[i]).find(".item-title1").text(obj.title1);
 			$($(".grid-list-item-info")[i]).find(".item-title2").text(obj.title2);
-			$($(".grid-list-item-info")[i]).find(".item-price").text(obj.price);			
+			$($(".grid-list-item-info")[i]).find(".item-price").text(obj.price);
+
+			$($(".grid-list-item")[i]).css("margin-top","10px").fadeIn();
+						
 		}	// for end
-		i=start;
-		$($(".grid-list-item")[i]).fadeIn({
-			duration:100,
-			complete:function(){
-				i++;
-				if(i>=$(".grid-list-item-image").length)return;
-				$($(".grid-list-item")[i]).fadeIn({
-					duration:100,
-					complete:function(){
-						i++;
-						if(i>=$(".grid-list-item-image").length)return;
-						$($(".grid-list-item")[i]).fadeIn({
-							duration:100,
-							complete:function(){
-								i++;
-								if(i>=$(".grid-list-item-image").length)return;
-								$($(".grid-list-item")[i]).fadeIn();										
-							}	// complete
-						});						
-					}	// complete
-				});				
-			}	// complete
-		});	
+		// i=start;
+		// $($(".grid-list-item")[i]).css("margin-top","40px").fadeIn();
+		// if(i+1<$(".grid-list-item-image").length){
+		// 	$($(".grid-list-item")[i+1]).css("margin-top","40px").fadeIn();
+		// }
+		// if(i+2<$(".grid-list-item-image").length){
+		// 	$($(".grid-list-item")[i+2]).css("margin-top","40px").fadeIn();
+		// }
+		// if(i+3<$(".grid-list-item-image").length){
+		// 	$($(".grid-list-item")[i+3]).css("margin-top","40px").fadeIn();
+		// }
+		// $($(".grid-list-item")[i]).css("margin-top","40px").fadeIn({
+		// 	complete:function(){
+		// 		i++;
+		// 		if(i>=$(".grid-list-item-image").length)return;
+		// 		$($(".grid-list-item")[i]).css("margin-top","40px").fadeIn({
+		// 			complete:function(){
+		// 				i++;
+		// 				if(i>=$(".grid-list-item-image").length)return;
+		// 				$($(".grid-list-item")[i]).css("margin-top","40px").fadeIn({
+		// 					complete:function(){
+		// 						i++;
+		// 						if(i>=$(".grid-list-item-image").length)return;
+		// 						$($(".grid-list-item")[i]).css("margin-top","40px").fadeIn();				
+		// 					}	// complete
+		// 				});						
+		// 			}	// complete
+		// 		});				
+		// 	}	// complete
+		// });	
 		
 	}
 	$(window).on("scroll", function(){
 		// 위쪽으로 스크롤된 길이 구하기
 		var scrollTop=$(window).scrollTop();
-		if(scrollTop>=60){
+		if(scrollTop>=150){
 			showItem(1);	// 2행 이미지 불러오기
 		}
-		if(scrollTop>=480){			
+		if(scrollTop>=580){			
 			showItem(2);	// 3행 이미지 불러오기
 		}
 		console.log("scrollTop : "+scrollTop);
