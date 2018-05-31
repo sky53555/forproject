@@ -2,26 +2,25 @@
 
 .sub-menu{
   position:relative;
-  float:left; /* optional */  
-  height: 300px;
-  margin-top: 100px;
+  float:left; /* optional   */
+  height: 500px;
+  margin-top: 50px;
   margin-bottom: 100px;
   width: 100%;
 }
-.sub-menu-title{
+#sub-menu-category-image{
   position:absolute;
-  font-family: 'Poiret One', cursive;
-  font-weight: bold;
-  font-size: 40px;
-  color: ;
-  top:40px;
-  left:-400px;
-  transition: left 0.6s linear;
+  left: -800px;
+  max-height: 50%;
+  transition: left 0.5s linear;
+  z-index: 50;
 }
 #sub-menu-image{
-  margin-left: 90%;
+  position:absolute;  
+  left: 90%;
   max-height: 100%;
-  transition: margin-left 0.6s linear;
+  transition: left 0.6s linear;
+  z-index: 20;
 }
 .grid-list-item{
   width: 100%;

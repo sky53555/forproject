@@ -40,7 +40,7 @@
 
 			<div id="icon" style="font-size:1.5em;">	
 				<a href="#"><i class="far fa-heart"></i></a>
-				<a href="#"><i class="far fa-user-circle"></i></a>
+				<a href="login.html"><i class="far fa-user-circle"></i></a>
 			</div>
 
 		</div>
@@ -50,8 +50,8 @@
 <div class="container">
 	<!--글과 그림 애니메이션-->
 	<div class="row sub-menu">
-		<img id="sub-menu-image" src="image/acc/00.jpg">
-		<div class="sub-menu-title">ACC2222</div>		
+		<img id="sub-menu-category-image" src="image/acc/t00.png">		
+		<img id="sub-menu-image" src="image/acc/00.png">
 	</div>
 	<div class="clearfix"></div>
 	<!--상품-->
@@ -258,13 +258,12 @@
 		{title1:"Wool Socks Camel",			title2:"CAP Studio",				price:"15,000원"},
 		{title1:"Logo Socks",				title2:"Paco Rabanne",				price:"18,000원"} ];
 
-	//$(".sub-menu-title").hide();
 	$("#sub-menu-image")
 	.hide()
-	.css("margin-left", "45%")
+	.css("left", "20%")
 	.fadeIn()
 	.one("transitionend", function(){
-	 	$(".sub-menu-title").css("left", "40%").fadeIn();
+	 	$("#sub-menu-category-image").css("left", "15%").fadeIn();
 	 });
 
 	var imageLoad=[false, false, false];
