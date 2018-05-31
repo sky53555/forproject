@@ -166,11 +166,11 @@
 		var scrollTop=$(window).scrollTop();
 		// window의 높이
 		var windowHeight=$(window).height();
-		$("#sTop").text("scrollTop:"+scrollTop);
-		$("#wHeight").text("windowHeight:"+windowHeight);
+		// $("#sTop").text("scrollTop:"+scrollTop);
+		// $("#wHeight").text("windowHeight:"+windowHeight);
 	
 		var movedHeight = scrollTop+windowHeight;
-		$("#wHeight").text("총 이동 스크롤 길이:"+movedHeight);
+		// $("#wHeight").text("총 이동 스크롤 길이:"+movedHeight);
 		// scrollTop이 200일 때 2번째 이미지를 보여줌
 		if(movedHeight>=1000){
 			console.log("2번째 이미지");
