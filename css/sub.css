@@ -3,8 +3,9 @@
 .sub-menu{
   position:relative;
   float:left; /* optional */  
-  height: 150px;
-  margin-bottom: 50px;
+  height: 300px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   width: 100%;
 }
 .sub-menu-title{
@@ -15,7 +16,7 @@
   color: ;
   top:40px;
   left:-400px;
-  transition: left 0.3s linear;
+  transition: left 0.6s linear;
 }
 #sub-menu-image{
   margin-left: 90%;
