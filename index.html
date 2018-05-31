@@ -11,12 +11,6 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 </head>
-<style>
-	#showInfo{
-		position: fixed;
-		top: 50px;
-	}
-</style>
 <body>
 
 <div id="wraper">
@@ -105,14 +99,6 @@
 		</div>
 	</div>
 </div>
-
-<div id="showInfo">
-	<h2>스크롤 이벤트</h2>
-	<p id="sTop"></p>
-	<p id="wHeight">window Hight</p>
-	<p id="dHeight"></p>
-</div>
-
 	<!--footer-->
 	<footer>
 		<div id="fwarper">
@@ -156,25 +142,28 @@
 
 	// 이미지 div의 아이디를 담은 배열
 	var imagesId=["#first","#second","#third"];
+	// 이미지 div를 관리할 index
 	var idx=0;
-	// 출력해보기
-	imagesAni($("#first"));
+
+	// 로딩시 첫번째 이미지 출력
+	imagesAni($(imagesId[idx]));
+	idx++;
+
 	$(window).on("scroll", function(){
 		// 위쪽으로 스크롤 된 길이 구하기
 		var scrollTop=$(window).scrollTop();
 		// window의 높이
 		var windowHeight=$(window).height();
-		$("#sTop").text("scrollTop:"+scrollTop);
-		$("#wHeight").text("windowHeight:"+windowHeight);
-	
+		// 총 이동한 스크롤 길이
 		var movedHeight = scrollTop+windowHeight;
-		$("#wHeight").text("총 이동 스크롤 길이:"+movedHeight);
 		if(movedHeight>=1000){
-			imagesAni($("#second"));
+			imagesAni($(imagesId[idx]));
+			idx++;
 		}
 		if(movedHeight>=1800){
-			imagesAni($("#third"));
-		};
+			imagesAni($(imagesId[idx]));
+			idx++;
+		}
 	});
 
 	function imagesAni($input){

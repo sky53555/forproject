@@ -170,7 +170,7 @@ footer #fwarper{
 	background-color: #eee;
 }
 
-.row{
+#first, #second, #third{
 	display: none;
 	position: relative;
 }
