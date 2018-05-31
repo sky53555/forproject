@@ -186,10 +186,19 @@ footer #fwarper{
 	max-width: 100%;
 }
 
-.ment_area>img{
+.ment_area{
 	display: none;
 	position: absolute;
-	right: 170px;
+	right: 100px;
+	background-color: white;
+	height: 500px;
+	box-shadow: 5px 0px 10px 2px rgb(153,153,153);
+}
+
+.ment_area>img{
+	position: relative;
+	top: 50px;
+	max-width: 100%;
 }
 
 .showD_left:hover, .showD_right:hover{
@@ -214,27 +223,33 @@ footer #fwarper{
 	text-align: right;
 	position: absolute;
 	justify-content: flex-end;
-	top: 350px;
-	left: 425px;
+	top: 400px;
+	left: 385px;
 	width: 100px;
 	height: 50px;
-	background-color: black;
-	color: white;	
 }
 
 .showD_right{
 	position: absolute;
-	top: 350px;
-	left: 525px;
+	top: 400px;
+	left: 485px;
 	width: 200px;
 	height: 50px;
-	background-color: black;
-	color: white;
-}
-.showD_right>span{
-	color: black;
 }
 
 .show_ment{
+	background-color: black;
 	color: white;
+}
+.reverse_ment{
+	background-color: white;
+	color: black;
+}
+
+.spacer{
+	height: 150px;
+}
+
+#second, #third{
+	display: none;
 }
