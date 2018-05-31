@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>ACC</title>
+	<title>A style</title>
 	<link rel="stylesheet" href="css/bootstrap.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
@@ -21,21 +21,18 @@
 			</h1>
 
 			<ul>
-				<li><a href="outer.html">OUTER</a></li>
-				<li><a href="top.html">TOP</a></li>
-				<li><a href="bottom.html">BOTTOM</a></li>
-				<li><a href="acc.html">ACC</a></li>
-				<li><a href="shoes.html">SHOES</a></li>
-				
+				<li><a href="javascript:goList('outer')">OUTER</a></li>
+				<li><a href="javascript:goList('top')">TOP</a></li>
+				<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
+				<li><a href="javascript:goList('acc')">ACC</a></li>
+				<li><a href="javascript:goList('shoes')">SHOES</a></li>				
 			</ul>
 			
-			<div class="search" style="font-size:1.7em; color:Tomato">
-				
+			<div class="search" style="font-size:1.7em; color:Tomato">				
 				<span class="searchbox">	
 			    <input type="search" placeholder="Search..." />
 				</span>
-				<i class="fa fa-search"></i>
-				
+				<i class="fa fa-search"></i>				
 			</div>
 
 			<div id="icon" style="font-size:1.5em;">	
@@ -50,7 +47,7 @@
 <div class="container">
 	<!--글과 그림 애니메이션-->
 	<div class="row sub-menu">
-		<img id="sub-menu-category-image" src="image/acc/t00.png">		
+		<img id="sub-menu-category-image" src="image/acc/t00.png">
 		<img id="sub-menu-image" src="image/acc/00.png">
 	</div>
 	<div class="clearfix"></div>
@@ -244,6 +241,7 @@
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>	
 <script>
+	var aStyleItem=localStorage.aStyleItem;
 	var itemInfo=[
 		{title1:"BONSAI BAG LARGE",			title2:"SIMON MILLER",				price: "350,000원"},
 		{title1:"Rainbow Sequin Pouch",		title2:"Attico",					price:"220,000원"},
@@ -258,12 +256,16 @@
 		{title1:"Wool Socks Camel",			title2:"CAP Studio",				price:"15,000원"},
 		{title1:"Logo Socks",				title2:"Paco Rabanne",				price:"18,000원"} ];
 
-	$("#sub-menu-image")
+	$("#sub-menu-image")	
 	.hide()
+	.attr("src", "image/"+aStyleItem+"/00.png")
 	.css("left", "20%")
 	.fadeIn()
 	.one("transitionend", function(){
-	 	$("#sub-menu-category-image").css("left", "15%").fadeIn();
+		console.log("transitionend");
+	 	$("#sub-menu-category-image")
+		.attr("src", "image/"+aStyleItem+"/t00.png")
+		.css("left", "15%").fadeIn();
 	 });
 
 	var imageLoad=[false, false, false];
@@ -286,7 +288,7 @@
 			var imageNm="0"+(i+1);
 			imageNm=imageNm.substring(imageNm.length-2, imageNm.length)+".jpg";
 			console.log("imageNm : " + imageNm);
-			$($(".grid-list-item-image")[i]).find(".item-image").attr("src", "image/acc/"+imageNm);
+			$($(".grid-list-item-image")[i]).find(".item-image").attr("src", "image/"+aStyleItem+"/"+imageNm);
 			
 			var obj=itemInfo[i];
 			$($(".grid-list-item-info")[i]).find(".item-title1").text(obj.title1);
@@ -320,6 +322,11 @@
 		$(this).parent().removeClass("item-shadow");
 		$(this).find(".item-image").css("transform", "scale(1");
 	});
+
+	function goList(arg){
+		localStorage.aStyleItem=arg;
+		location.href="itemList.html";
+	};
 </script>
 </body>
 </html>
