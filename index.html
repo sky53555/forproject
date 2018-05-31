@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="css/main.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
 
@@ -17,7 +19,7 @@
 		<div id="hwraper">
 
 			<h1 id="logo">
-			<a href="#"><img src="image/etc/logo.png" alt="logo"></a>
+			<a href="#"><img src="image/etc/logo.png"ogo"></a>
 			</h1>
 
 			<ul>
@@ -46,11 +48,57 @@
 		</div>
 	</header>
 
-	<!--carousel-->
-	<section>
-		carousel
-	</section>
-
+<div class="container">
+	<!-- 첫 번째 이미지 -->
+	<div class="row" id="first">
+		<div class="col-xs-6 img_area">
+			<img src="image/index/01.jpg">
+		</div>
+		<div class="col-xs-6 ment_area">
+			<img src="image/index/hotSummer.png">
+		</div>
+		<div class="showD_left showDetails show_ment">
+			<img src="image/index/right-arrow.png">&nbsp;<span class="glyphicon glyphicon-heart"></span>
+		</div>
+		<div class="showD_right showDetails show_ment">
+			<b>SHOW DETAILS&nbsp;</b>&nbsp;<span class="glyphicon glyphicon-heart" style="color: black;"></span>
+		</div>
+	</div>
+	<!-- 공백 -->
+	<div class="spacer"></div>
+	<!-- 두 번째 이미지 -->
+	<div class="row" id="second">
+		<div class="col-xs-6 ment_area">
+			<img src="image/index/specialSale.png">
+		</div>
+		<div class="col-xs-6 img_area">
+			<img src="image/index/02.jpg">
+		</div>
+		<div class="showD_left showDetails show_ment">
+			<img src="image/index/right-arrow.png">&nbsp;<span class="glyphicon glyphicon-heart"></span>
+		</div>
+		<div class="showD_right showDetails show_ment">
+			<b>SHOW DETAILS&nbsp;</b>&nbsp;<span class="glyphicon glyphicon-heart" style="color: black;"></span>
+		</div>
+	</div>
+	<!-- 공백 -->
+	<div class="spacer"></div>
+	<!-- 세 번째 이미지 -->
+	<div class="row" id="third">
+		<div class="col-xs-6 img_area">
+			<img src="image/index/03.png">
+		</div>
+		<div class="col-xs-6 ment_area">
+			<img src="image/index/weeklyBest.png">
+		</div>
+		<div class="showD_left showDetails show_ment">
+			<img src="image/index/right-arrow.png">&nbsp;<span class="glyphicon glyphicon-heart"></span>
+		</div>
+		<div class="showD_right showDetails show_ment">
+			<b>SHOW DETAILS&nbsp;</b>&nbsp;<span class="glyphicon glyphicon-heart" style="color: black;"></span>
+		</div>
+	</div>
+</div>
 	<!--footer-->
 	<footer>
 		<div id="fwarper">
@@ -71,23 +119,75 @@
 </div>
 <!--warper-->
 
-
-
-
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>	
 <script>
 
+<<<<<<< HEAD
 $(document).ready(function() {
      		
             $(".fa-search").click(function() {
             	console.log("ddd");
+=======
+	$(document).ready(function() {
+            $(".search").click(function() {
+>>>>>>> 13d2a7208147ef5c0f89683d478d018104f9bb20
                $(".searchbox").toggle();
                $("input[type='text']").val("");
                $("input[type='text']").focus();
              });
- 
-        });
+     });
+	
+	$(".showDetails").mouseover(function(){
+		$(".showD_left>span").css("color","black");
+		$(".showD_right").addClass("reverse_ment");
+	})
+	$(".showDetails").mouseout(function(){
+		$(".showD_left>span").css("color","white");
+		$(".showD_right").removeClass("reverse_ment");
+
+	})
+
+	// 이미지 div의 아이디를 담은 배열
+	var imagesId=["#first","#second","#third"];
+	// 이미지 div를 관리할 index
+	var idx=0;
+
+	// 로딩시 첫번째 이미지 출력
+	imagesAni($(imagesId[idx]));
+	idx++;
+
+	$(window).on("scroll", function(){
+		// 위쪽으로 스크롤 된 길이 구하기
+		var scrollTop=$(window).scrollTop();
+		// window의 높이
+		var windowHeight=$(window).height();
+		// 총 이동한 스크롤 길이
+		var movedHeight = scrollTop+windowHeight;
+		if(movedHeight>=1000){
+			imagesAni($(imagesId[idx]));
+			idx++;
+		}
+		if(movedHeight>=1800){
+			imagesAni($(imagesId[idx]));
+			idx++;
+		}
+	});
+
+	function imagesAni($input){
+		$input.show(function(){
+			$input.children(".img_area").fadeIn({
+				duration:1500,
+				complete:function(){
+					$(this).children().addClass("animated slideInLeft").fadeIn(function(){
+						$(".ment_area").fadeIn(1000,function(){
+							$(".showDetails").css("display","flex").addClass("animated slideInLeft");
+						}).addClass("animated slideInRight");
+					});
+				}
+			});
+		});	
+	};
 </script>
 </body>
 </html>

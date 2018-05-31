@@ -97,7 +97,7 @@ header{
 /*section*/
 section{
 	height:80vh;
-	background-color: lightyellow;
+	/*background-color: lightyellow;*/
 }
 
 
@@ -167,4 +167,86 @@ footer #fwarper{
 #fwarper #btn p a:hover{
 	color:#000;
 	font-weight: bold;
+	background-color: #eee;
+}
+
+#first, #second, #third{
+	display: none;
+	position: relative;
+}
+
+.img_area{
+	padding: 0 !important;
+	background-color: rgb(249,234,206);
+	overflow: hidden;
+	display: none;
+	height: 700px;
+}
+.img_area>img{
+	display: none;
+	max-width: 100%;
+}
+
+.ment_area{
+	display: none;
+	position: absolute;
+	right: 100px;
+	background-color: white;
+	height: 500px;
+	box-shadow: 5px 0px 10px 2px rgb(153,153,153);
+}
+
+.ment_area>img{
+	position: relative;
+	top: 50px;
+	max-width: 100%;
+}
+
+.showD_left:hover, .showD_right:hover{
+	cursor: pointer;
+}
+
+.showDetails{
+	font-family: 'Poiret One', cursive;
+	text-align: center;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+.showDetails>img{
+	width: 20px;
+}
+
+.showD_left{
+	font-weight: bold;
+	text-align: right;
+	position: absolute;
+	justify-content: flex-end;
+	top: 400px;
+	left: 385px;
+	width: 100px;
+	height: 50px;
+}
+
+.showD_right{
+	position: absolute;
+	top: 400px;
+	left: 485px;
+	width: 200px;
+	height: 50px;
+}
+
+.show_ment{
+	background-color: black;
+	color: white;
+}
+.reverse_ment{
+	background-color: white;
+	color: black;
+}
+
+.spacer{
+	height: 150px;
 }
