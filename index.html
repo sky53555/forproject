@@ -5,42 +5,213 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>A style</title>
-	<link rel="stylesheet" href="css/bootstrap.css"/>
 	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/media.css"/>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	
 </head>
 <body>
 
-<!--navi-->
-<header>
 
-	<h1 id="logo"></h1>
+<!--header-->
+	<header id="header1">
+		<div id="hwraper">
+		<!--logo-->
+			<h1 id="logo">
+				<a href="#"><img src="image/etc/logo.png"></a>
+			</h1>
 
-	<ul>
-		<li><a href="outer.html">OUTER</li>
-		<li><a href="outer.html">TOP</li>
-		<li><a href="outer.html">BOTTOM</li>
-		<li><a href="outer.html">ACC</li>
-		<li><a href="outer.html">SHOES</li>
-	</ul>
-</header>
+			<!--navi-->
+			<ul id="hnavi">
+				<li><a href="javascript:goList('outer')">OUTER</a></li>
+				<li><a href="javascript:goList('top')">TOP</a></li>
+				<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
+				<li><a href="javascript:goList('acc')">ACC</a></li>
+				<li><a href="javascript:goList('shoes')">SHOES</a></li>
+			</ul>
+			
+			<!--media toggle:hidden now-->
+			<label>
+				<input type='checkbox'>
+				<span class='menu'>
+					<span class='hamburger'></span>
+				</span>
 
-<!--carousel-->
-<section>
+				<ul id="labelul">
+					<li><a href="javascript:goList('outer')">OUTER</a></li>
+					<li><a href="javascript:goList('top')">TOP</a></li>
+					<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
+					<li><a href="javascript:goList('acc')">ACC</a></li>
+					<li><a href="javascript:goList('shoes')">SHOES</a></li>
+				</ul>
+
+			</label>
+
+			<!--search icon-->
+			<div class="search" style="font-size:1.7em; color:Tomato">			
+				<span class="searchbox">	
+			    <input type="text" placeholder="Search..." />
+				</span>
+				<i class="fa fa-search"></i>			
+			</div>
+			
+			<!--icons-->
+			<div id="icon" style="font-size:1.5em;">	
+				<a href="#"><i class="far fa-heart"></i></a>
+				<a href="login.html"><i class="far fa-user-circle"></i></a>
+			</div>
+
+		</div>
+		<!--hwarper-->
+	</header>
+	<!--header-->
 	
-</section>
+	<!--section-->
+	<div class="container">
+		<!-- 첫 번째 이미지 -->
+		<div class="row" id="first">
+			<div class="col-xs-6 img_area">
+				<img src="image/index/01.jpg">
+			</div>
+			<div class="col-xs-6 ment_area">
+				<img src="image/index/hotSummer.png">
+			</div>
+			<div class="showD_left showDetails show_ment">
+				<img src="image/index/right-arrow.png">&nbsp;<span class="glyphicon glyphicon-heart"></span>
+			</div>
+			<div class="showD_right showDetails show_ment">
+				<b>SHOW DETAILS&nbsp;</b>&nbsp;<span class="glyphicon glyphicon-heart" style="color: black;"></span>
+			</div>
+		</div>
+		<!-- 공백 -->
+		<div class="spacer"></div>
 
-<!--footer-->
-<footer>
-	
-</footer>
+		<!-- 두 번째 이미지 -->
+		<div class="row" id="second">
+			<div class="col-xs-6 ment_area">
+				<img src="image/index/specialSale.png">
+			</div>
+			<div class="col-xs-6 img_area">
+				<img src="image/index/02.jpg">
+			</div>
+			<div class="showD_left showDetails show_ment">
+				<img src="image/index/right-arrow.png">&nbsp;<span class="glyphicon glyphicon-heart"></span>
+			</div>
+			<div class="showD_right showDetails show_ment">
+				<b>SHOW DETAILS&nbsp;</b>&nbsp;<span class="glyphicon glyphicon-heart" style="color: black;"></span>
+			</div>
+		</div>
+		<!-- 공백 -->
+		<div class="spacer"></div>
 
+		<!-- 세 번째 이미지 -->
+		<div class="row" id="third">
+			<div class="col-xs-6 img_area">
+				<img src="image/index/03.png">
+			</div>
+			<div class="col-xs-6 ment_area">
+				<img src="image/index/weeklyBest.png">
+			</div>
+			<div class="showD_left showDetails show_ment">
+				<img src="image/index/right-arrow.png">&nbsp;<span class="glyphicon glyphicon-heart"></span>
+			</div>
+			<div class="showD_right showDetails show_ment">
+				<b>SHOW DETAILS&nbsp;</b>&nbsp;<span class="glyphicon glyphicon-heart" style="color: black;"></span>
+			</div>
+		</div>
+	</div>
+	<!--end of section-->
 
+	<!--footer-->
+	<footer id="footer1">
+		<div id="fwarper">
+
+			<ul id="lists">
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Shipping Information</a></li>
+				<li><a href="#">Return & Exchanges</a></li>
+			</ul>
+
+			<div id="btn">
+				<p><a href="#">CONTACT & HELP</a></p>
+				<p><a href="#">FOLLOW US</a></p>
+			</div>
+
+		</div>
+	</footer>
+	<!--end of footer-->
 
 
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>	
 <script>
+
+	   		
+    $(".fa-search").click(function() {
+       $(".searchbox").toggle();
+       $("input[type='text']").val("");
+       $("input[type='text']").focus();
+     });
+
 	
+	$(".showDetails").mouseover(function(){
+		$(".showD_left>span").css("color","black");
+		$(".showD_right").addClass("reverse_ment");
+	})
+	$(".showDetails").mouseout(function(){
+		$(".showD_left>span").css("color","white");
+		$(".showD_right").removeClass("reverse_ment");
+
+	})
+
+	// 이미지 div의 아이디를 담은 배열
+	var imagesId=["#first","#second","#third"];
+	// 이미지 div를 관리할 index
+	var idx=0;
+
+	// 로딩시 첫번째 이미지 출력
+	imagesAni($(imagesId[idx]));
+	idx++;
+
+	$(window).on("scroll", function(){
+		// 위쪽으로 스크롤 된 길이 구하기
+		var scrollTop=$(window).scrollTop();
+		// window의 높이
+		var windowHeight=$(window).height();
+		// 총 이동한 스크롤 길이
+		var movedHeight = scrollTop+windowHeight;
+		if(movedHeight>=1000){
+			imagesAni($(imagesId[idx]));
+			idx++;
+		}
+		if(movedHeight>=1800){
+			imagesAni($(imagesId[idx]));
+			idx++;
+		}
+	});
+
+	function imagesAni($input){
+		$input.show(function(){
+			$input.children(".img_area").fadeIn({
+				duration:1500,
+				complete:function(){
+					$(this).children().addClass("animated slideInLeft").fadeIn(function(){
+						$(".ment_area").fadeIn(1000,function(){
+							$(".showDetails").css("display","flex").addClass("animated slideInLeft");
+						}).addClass("animated slideInRight");
+					});
+				}
+			});
+		});	
+	};
+
+	function goList(arg){
+		localStorage.aStyleItem=arg;
+		location.href="itemList.html";
+	};
 </script>
 </body>
 </html>
