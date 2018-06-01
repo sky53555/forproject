@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <title>A style</title>
+   <link rel="stylesheet" href="css/main.css"/>
+   <link rel="stylesheet" href="css/media.css"/>
+   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="css/bootstrap.css">
+   <link rel="stylesheet" href="css/sub.css"/>
+   <link rel="stylesheet" href="css/list.css"/>
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+</head>
+
+<body>
+<!--header-->
+<iframe src="header.html" frameborder="0" width="100%" height="auto" scrolling="no"></iframe>
+
+<!--container-->
+<div class="container">
+
+   <!--cart-->
+   <div class="cart">
+
+      <table>
+         <thead class="cart_row cart_header">
+            <tr>
+               <th colspan="5">
+                  <h2><br>You have <strong>1</strong> item in your wish list</h2>
+               </th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td width="15%" class="">
+                  <img src="image/acc/01.jpg" class="listitem-image">                
+                  <!--  img
+                  <div class="grid-list-item grid-list-item-view1">
+                     <div class="grid-list-item-image">
+                        <img class="item-image">
+                     </div>
+                  </div>
+                  -->
+               </td>
+               <td width="40%">
+                  <div class="list-view-item__title">
+                     <div class="grid-list-item-info">
+                     <p class="item-title1">BONSAI BAG LARGE</p>
+                     <span class="item-title2">SIMON MILLER</span>
+                     <span class="item-price"></span>
+                     </div>
+                  </div>                  
+                  <p>
+                    <a class="wishlist-btn black" href="">Remove</a>
+                  </p>
+               </td>
+               <td width="15%">350,000원
+               </td>
+               <td width="20%"></td>
+               <td width="10%">
+                  <a href="/products/boy-crystal" class="btn_w white">BUY</a>
+               </td>
+            </tr>                
+                
+         </tbody>
+      </table>
+          
+   </div>
+   <!--cart-->
+
+
+</div>
+<!--container-->
+<!--footer-->
+<iframe src="footer.html" frameborder="0" width="100%" height="auto" scrolling="no"></iframe>
+
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>   
+
+<script>
+   var aStyleItemIndex=localStorage.aStyleItemIndex;
+   var itemInfo=[
+      {title1:"BONSAI BAG LARGE",         title2:"SIMON MILLER",            price: "350,000원"},
+      {title1:"Rainbow Sequin Pouch",      title2:"Attico",               price:"220,000원"},
+      {title1:"Golden Clutch",         title2:"Golden Goose Deluxe Brand",   price:"90,000원"},
+      {title1:"Bonsai Bag Mango",         title2:"Simon Miller",            price:"230,000원"},
+      {title1:"Leather Lunchbag Clutch",   title2:"Simon Miller",            price:"110,000원"},
+      {title1:"Gaia's Ark Jade",         title2:"Cult Gaia",               price:"210,000원"},
+      {title1:"Gaia's Ark Tortoise",      title2:"Cult Gaia",               price:"210,000원"},
+      {title1:"Bond Bracelet",         title2:"Charlotte Chesnais",      price:"370,000원"},
+      {title1:"Caracol Earcuff",         title2:"Charlotte Chesnais",      price:"190,000원"},
+      {title1:"Gaia's Hoops Large",      title2:"Cult Gaia",               price:"75,000원"},
+      {title1:"Wool Socks Camel",         title2:"CAP Studio",            price:"15,000원"},
+      {title1:"Logo Socks",            title2:"Paco Rabanne",            price:"18,000원"} ];
+
+   console.log(aStyleItemIndex);
+
+   // 이전 카테고리 이동
+   function goBack(){
+      history.back();
+   };
+</script>
+</body>
+</html>
