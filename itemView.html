@@ -28,15 +28,9 @@
 
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>	
+
 <script>
-    $(".fa-search").click(function() {
-       $(".searchbox").toggle();
-       $("input[type='text']").val("");
-       $("input[type='text']").focus();
-    });
-
-
-	var aStyleItemIndex=localStorage.aStyleItemIndex;
+ 	var aStyleItemIndex=localStorage.aStyleItemIndex;
 	var itemInfo=[
 		{title1:"BONSAI BAG LARGE",			title2:"SIMON MILLER",				price: "350,000원"},
 		{title1:"Rainbow Sequin Pouch",		title2:"Attico",					price:"220,000원"},
@@ -53,10 +47,9 @@
 
 	console.log(aStyleItemIndex);
 
-	// header의 카테고리 선택
-	function goList(arg){
-		localStorage.aStyleItem=arg;
-		location.href="itemList.html";
+	// 이전 카테고리 이동
+	function goBack(){
+		history.back();
 	};
 </script>
 </body>
