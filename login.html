@@ -60,23 +60,10 @@
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>	
 <script>
-
-$(document).ready(function() {
-     		
-            $(".fa-search").click(function() {
-		    $(".searchbox").toggle();
-		    $("input[type='text']").val("");
-		    $("input[type='text']").focus();
-		    });
-		    
- 			
- 			$("#onload_fadein").addClass("animated fadeInUp");        
+	$(document).ready(function() {
+		$("#onload_fadein").addClass("animated fadeInUp");        
  
-        });
-function goList(arg){
-		localStorage.aStyleItem=arg;
-		location.href="itemList.html";
-	};
+    });
 </script>
 </body>
 </html>
