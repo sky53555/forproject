@@ -30,8 +30,12 @@ body{
 }
 
 #return-to-top:hover {
- transform: scale(1.2) rotate(-90deg) translate(10px);
+    transform: scale(1.2) rotate(-90deg) translate(10px);
+}
 
+#return-to-top .fa-long-arrow-alt-up{
+    transform:rotate(90deg);
+    padding: 10px;
 }
 
 #return-to-top .fa-long-arrow-alt-up{
