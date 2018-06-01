@@ -1,0 +1,133 @@
+
+@media screen and (max-width: 800px) {
+	#hnavi {
+		display:none;
+	}
+	
+	#icon{
+		display:none;
+	}
+
+	.search{
+		display:none;
+	}
+
+	@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
+	
+	label{
+		display:block !important;
+	}
+	
+
+	label .menu {
+	  position: absolute;
+	  right: -30px;
+	  top: -40px;
+	  z-index: 100;
+	  width: 100px;
+	  height: 100px;
+	  background: #000;
+	  border-radius: 50% 50% 50% 50%;
+	  transition: .5s ease-in-out;
+	  box-shadow: 0 0 0 0 #000, 0 0 0 0 #000;
+	  cursor: pointer;
+	}
+	label .hamburger {
+	  position: absolute;
+	  top: 60px;
+	  left: 30px;
+	  width: 20px;
+	  height: 2px;
+	  background: #fff;
+	  display: block;
+	  -webkit-transform-origin: center;
+	          transform-origin: center;
+	  transition: .5s ease-in-out;
+	}
+	label .hamburger:after, label .hamburger:before {
+	  transition: .5s ease-in-out;
+	  content: "";
+	  position: absolute;
+	  display: block;
+	  width: 100%;
+	  height: 100%;
+	  background: #fff;
+	}
+	label .hamburger:before {
+	  top: -10px;
+	}
+	label .hamburger:after {
+	  bottom: -10px;
+	}
+	label input {
+	  display: none;
+	}
+	label input:checked + .menu {
+	  box-shadow: 0 0 0 100vw #000, 0 0 0 100vh #000;
+	  border-radius: 0;
+
+	}
+	label input:checked + .menu .hamburger {
+	  -webkit-transform: rotate(45deg);
+	          transform: rotate(45deg);
+	}
+	label input:checked + .menu .hamburger:after {
+	  -webkit-transform: rotate(90deg);
+	          transform: rotate(90deg);
+	  bottom: 0;
+	}
+	label input:checked + .menu .hamburger:before {
+	  -webkit-transform: rotate(90deg);
+	          transform: rotate(90deg);
+	  top: 0;
+	}
+	label input:checked + .menu + #labelul {
+	  opacity: 1;
+	}
+	label #labelul {
+		z-index:100;
+	    position:absolute;
+	    top:220%;
+		left:50%;
+		 -webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		transition: .25s 0s ease-in-out;
+		text-align:center;
+	
+	 
+	}
+
+	
+	label #labelul a {
+	margin:4em 0;
+	display: block;
+	color: #fff !important;
+	text-decoration: none;
+	transition:all 0.5s;
+
+
+	}
+
+	label #labelul li a:hover{
+		color:#eee !important;
+		transform:scale(1.5);		
+	}
+	
+	#lists{
+		display:none;
+	}
+
+	
+	
+	#fwarper #btn {
+		position:absolute;
+		bottom:15%;
+	}
+
+	#fwarper #btn p{
+
+	text-align: center;
+	padding-top:15px;
+	}
+}
