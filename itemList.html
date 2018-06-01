@@ -308,13 +308,6 @@
 		.css("left", "15%").fadeIn();
 	});
 
-	$(".cool-link").each(function(index){
-		var link=$(this).text().toLowerCase();
-		if(link==aStyleItem){
-			$(this).addClass("cool-link-active");
-		}		
-	});
-
 	var imageLoad=[false, false, false];
 	
 	function showItem(row){
@@ -334,7 +327,7 @@
 
 			var imageNm="0"+(i+1);
 			imageNm=imageNm.substring(imageNm.length-2, imageNm.length)+".jpg";
-			console.log("imageNm : " + imageNm);
+			//console.log("imageNm : " + imageNm);
 			$($(".grid-list-item-image")[i]).find(".item-image").attr("src", "image/"+aStyleItem+"/"+imageNm).attr("id", "itemIndex"+i);
 			
 			var obj=itemInfo[i];

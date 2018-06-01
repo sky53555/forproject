@@ -24,3 +24,13 @@
 	        scrollTop : 0                       // Scroll to top of body
 	    }, 500);
 	});
+
+	var aStyleItem2=localStorage.aStyleItem;
+	if(aStyleItem2!=undefined&&aStyleItem2!="") {
+		$(".cool-link").each(function(index){
+			var link=$(this).text().toLowerCase();
+			if(link==aStyleItem2){
+				$(this).addClass("cool-link-active");
+			}		
+		});
+	}
