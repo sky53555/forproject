@@ -5,43 +5,62 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>A style</title>
-	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/media.css"/>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/sub.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.css"/>
-	<link rel="stylesheet" href="css/sub.css"/>
 </head>
+
 <body>
 <!--header-->
-	<header>
-		<div id="hwraper">
+<header id="header1">
+	<div id="hwraper">
 
-			<h1 id="logo">
-			<a href="index.html"><img src="image/etc/logo.png" alt="logo"></a>
-			</h1>
+		<h1 id="logo">
+		<a href="index.html"><img src="image/etc/logo.png" alt="logo"></a>
+		</h1>
+		<ul id="hnavi">
+			<li><a href="javascript:goList('outer')">OUTER</a></li>
+			<li><a href="javascript:goList('top')">TOP</a></li>
+			<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
+			<li><a href="javascript:goList('acc')">ACC</a></li>
+			<li><a href="javascript:goList('shoes')">SHOES</a></li>				
+		</ul>
 
-			<ul>
+		<!--media toggle:hidden now-->
+		<label>
+			<input type='checkbox'>
+			<span class='menu'>
+				<span class='hamburger'></span>
+			</span>
+
+			<ul id="labelul">
 				<li><a href="javascript:goList('outer')">OUTER</a></li>
 				<li><a href="javascript:goList('top')">TOP</a></li>
 				<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
 				<li><a href="javascript:goList('acc')">ACC</a></li>
-				<li><a href="javascript:goList('shoes')">SHOES</a></li>				
+				<li><a href="javascript:goList('shoes')">SHOES</a></li>
 			</ul>
-			
-			<div class="search" style="font-size:1.7em; color:Tomato">				
-				<span class="searchbox">	
-			    <input type="search" placeholder="Search..." />
-				</span>
-				<i class="fa fa-search"></i>				
-			</div>
 
-			<div id="icon" style="font-size:1.5em;">	
-				<a href="#"><i class="far fa-heart"></i></a>
-				<a href="login.html"><i class="far fa-user-circle"></i></a>
-			</div>
-
+		</label>
+		
+		<div class="search" style="font-size:1.7em; color:Tomato">				
+			<span class="searchbox">	
+		    <input type="search" placeholder="Search..." />
+			</span>
+			<i class="fa fa-search"></i>				
 		</div>
-	</header>
+
+		<div id="icon" style="font-size:1.5em;">	
+			<a href="#"><i class="far fa-heart"></i></a>
+			<a href="login.html"><i class="far fa-user-circle"></i></a>
+		</div>
+
+	</div>
+</header>
 
 <!--container-->
 <div class="container">
@@ -237,6 +256,23 @@
 
 </div>
 <!--container-->
+<!--footer-->
+<footer id="footer1">
+	<div id="fwarper">
+		<ul id="lists">
+			<li><a href="#">About us</a></li>
+			<li><a href="#">Shipping Information</a></li>
+			<li><a href="#">Return & Exchanges</a></li>
+		</ul>
+
+		<div id="btn">
+			<p><a href="#">CONTACT & HELP</a></p>
+			<p><a href="#">FOLLOW US</a></p>
+		</div>
+
+	</div>
+</footer>
+<!--end of footer-->
 
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>	

@@ -3,6 +3,7 @@
 	#hnavi {
 		display:none;
 	}
+	
 	#icon{
 		display:none;
 	}
@@ -13,9 +14,6 @@
 
 	@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
 	
-
-
-
 	label{
 		display:block !important;
 	}
@@ -23,11 +21,11 @@
 
 	label .menu {
 	  position: absolute;
-	  right: -100px;
-	  top: -100px;
-	  z-index: 1;
-	  width: 200px;
-	  height: 200px;
+	  right: -30px;
+	  top: -40px;
+	  z-index: 100;
+	  width: 100px;
+	  height: 100px;
 	  background: #000;
 	  border-radius: 50% 50% 50% 50%;
 	  transition: .5s ease-in-out;
@@ -36,9 +34,9 @@
 	}
 	label .hamburger {
 	  position: absolute;
-	  top: 135px;
-	  left: 50px;
-	  width: 30px;
+	  top: 60px;
+	  left: 30px;
+	  width: 20px;
 	  height: 2px;
 	  background: #fff;
 	  display: block;
@@ -67,6 +65,7 @@
 	label input:checked + .menu {
 	  box-shadow: 0 0 0 100vw #000, 0 0 0 100vh #000;
 	  border-radius: 0;
+
 	}
 	label input:checked + .menu .hamburger {
 	  -webkit-transform: rotate(45deg);
@@ -86,7 +85,7 @@
 	  opacity: 1;
 	}
 	label #labelul {
-		z-index:9999;
+		z-index:100;
 	    position:absolute;
 	    top:220%;
 		left:50%;
@@ -105,13 +104,14 @@
 	display: block;
 	color: #fff !important;
 	text-decoration: none;
+	transition:all 0.5s;
 
 
 	}
 
 	label #labelul li a:hover{
-		color:lightyellow !important;
-		
+		color:#eee !important;
+		transform:scale(1.5);		
 	}
 	
 	#lists{
@@ -124,11 +124,10 @@
 		position:absolute;
 		bottom:15%;
 	}
+
 	#fwarper #btn p{
 
 	text-align: center;
 	padding-top:15px;
-
-
-}
+	}
 }

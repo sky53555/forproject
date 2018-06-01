@@ -7,17 +7,38 @@
 
 }
 
+
 /*header*/
-header{
+#header1{
 	width:100%;
 	height:150px;
 	font-size:16px;
 	position:relative;
-	border-bottom: 1px solid #000;
+	border-bottom:1px solid #000;
+
 }
 
 #hwraper{
 	width:80%;
+}
+
+label{
+	display:none !important;
+}
+
+#hwraper #hnavi{
+	position:absolute;
+	right:15%;
+	top:60%;
+}
+
+#hwraper #hnavi li{
+	float:left;
+	display:block;
+	padding-right:50px;
+	font-family: 'Poiret One', cursive;
+	font-size: 2rem;
+	letter-spacing: 2px;
 }
 
 #hwraper a:link,
@@ -26,10 +47,11 @@ header{
 	text-decoration: none;
 
 }
-#hwraper ul a:hover{
+#hwraper #hnavi a:hover{
 	border-bottom:3px solid orange;
 	font-weight: bold;
 }
+
 
 #hwraper #logo{
 	position:absolute;
@@ -69,21 +91,6 @@ header{
 	width:120px;
 }
 
-#hwraper ul{
-	position:absolute;
-	right:15%;
-	top:60%;
-}
-
-#hwraper li{
-	float:left;
-	display:block;
-	padding-right:50px;
-	font-family: 'Poiret One', cursive;
-	font-size: 1.3rem;
-	letter-spacing: 2px;
-}
-
 #hwraper #icon{
 	position:absolute;
 	right:3%;
@@ -94,22 +101,19 @@ header{
 	padding-right:10px;
 }
 
-
-/*section*/
-section{
-	height:80vh;
-	/*background-color: lightyellow;*/
+::placeholder{
+	font-size:1.8rem;
 }
 
 
 /*footer*/
-footer{
+#footer1{
 	height:170px;
 	position:relative;
 	border-top: 1px solid #000;
 }
 
-footer #fwarper{
+#footer1 #fwarper{
 	width:60%;
 	margin:0 auto;
 	
@@ -122,22 +126,22 @@ footer #fwarper{
 	
 }
 
-#fwarper li{
+#fwarper #lists li{
 	float:left;
 
 }
-#fwarper li a{
+#fwarper #lists li a{
 	display:block;
 	padding-right:20px;
 	color:#656668;
 	text-decoration: none;
 	letter-spacing: 1.5px;
-	font-size: 0.7rem;
+	font-size: 1.5rem;
 	transition:all 0.3s;
 
 }
 
-#fwarper li a:hover{
+#fwarper #lists li a:hover{
 	text-decoration: none;
 	font-weight: bold;
 
@@ -163,14 +167,18 @@ footer #fwarper{
 	text-decoration: none;
 	color:#656668;
 	transition:all 0.3s;
+	font-size:2rem;
 
 }
 
 #fwarper #btn p a:hover{
 	color:#000;
 	font-weight: bold;
-	background-color: #eee;
 }
+
+
+
+/*======================================*/
 
 #indexBody{
 	padding-top: 50px;
