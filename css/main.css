@@ -13,14 +13,14 @@ body{
 #return-to-top {
     color:#000;
     position: fixed;
-    bottom: 50px;
+    bottom: 200px;
     right: -30px;
     width: 100px;
     height: 50px;
     font-size:1em;
     display: block;
     text-decoration: none;
-    display: none;c
+    display: none;
     transform:rotate(270deg);
     -webkit-transition: all 0.3s linear;
     -moz-transition: all 0.3s ease;
@@ -33,6 +33,12 @@ body{
  transform: scale(1.2) rotate(-90deg) translate(10px);
 
 }
+
+#return-to-top .fa-long-arrow-alt-up{
+  transform:rotate(90deg);
+  padding:10px;
+}
+
 /*header*/
 #header1{
    width:100%;
@@ -47,7 +53,9 @@ body{
    width:80%;
 }
 
-
+#mediaTog{
+   display:none !important;
+}
 
 #hwraper #hnavi{
    position:absolute;
