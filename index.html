@@ -140,9 +140,7 @@
 
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>   
-<script src="js/astyle.js"></script>   
-<script>
-   
+<script>  
    $(".showDetails").mouseover(function(){
       $(".showD_left>span").css("color","black");
       $(".showD_right").addClass("reverse_ment");
@@ -209,6 +207,10 @@
          });
       });   
    };
+
+   delete localStorage.aStyleItem;
+
 </script>
+<script src="js/astyle.js"></script> 
 </body>
 </html>
