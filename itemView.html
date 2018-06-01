@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>A style</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/media.css"/>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/sub.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+</head>
+
+<body>
+<!--header-->
+<iframe src="header.html" frameborder="0" width="100%" height="auto" scrolling="no"></iframe>
+
+<!--container-->
+<div class="container">
+
+</div>
+<!--container-->
+<!--footer-->
+<iframe src="footer.html" frameborder="0" width="100%" height="auto" scrolling="no"></iframe>
+
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>	
+<script>
+    $(".fa-search").click(function() {
+       $(".searchbox").toggle();
+       $("input[type='text']").val("");
+       $("input[type='text']").focus();
+    });
+
+
+	var aStyleItemIndex=localStorage.aStyleItemIndex;
+	var itemInfo=[
+		{title1:"BONSAI BAG LARGE",			title2:"SIMON MILLER",				price: "350,000원"},
+		{title1:"Rainbow Sequin Pouch",		title2:"Attico",					price:"220,000원"},
+		{title1:"Golden Clutch",			title2:"Golden Goose Deluxe Brand",	price:"90,000원"},
+		{title1:"Bonsai Bag Mango",			title2:"Simon Miller",				price:"230,000원"},
+		{title1:"Leather Lunchbag Clutch",	title2:"Simon Miller",				price:"110,000원"},
+		{title1:"Gaia's Ark Jade",			title2:"Cult Gaia",					price:"210,000원"},
+		{title1:"Gaia's Ark Tortoise",		title2:"Cult Gaia",					price:"210,000원"},
+		{title1:"Bond Bracelet",			title2:"Charlotte Chesnais",		price:"370,000원"},
+		{title1:"Caracol Earcuff",			title2:"Charlotte Chesnais",		price:"190,000원"},
+		{title1:"Gaia's Hoops Large",		title2:"Cult Gaia",					price:"75,000원"},
+		{title1:"Wool Socks Camel",			title2:"CAP Studio",				price:"15,000원"},
+		{title1:"Logo Socks",				title2:"Paco Rabanne",				price:"18,000원"} ];
+
+	console.log(aStyleItemIndex);
+
+	// header의 카테고리 선택
+	function goList(arg){
+		localStorage.aStyleItem=arg;
+		location.href="itemList.html";
+	};
+</script>
+</body>
+</html>

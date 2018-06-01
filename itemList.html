@@ -16,51 +16,7 @@
 
 <body>
 <!--header-->
-<header id="header1">
-	<div id="hwraper">
-
-		<h1 id="logo">
-		<a href="index.html"><img src="image/etc/logo.png" alt="logo"></a>
-		</h1>
-		<ul id="hnavi">
-			<li><a href="javascript:goList('outer')">OUTER</a></li>
-			<li><a href="javascript:goList('top')">TOP</a></li>
-			<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
-			<li><a href="javascript:goList('acc')">ACC</a></li>
-			<li><a href="javascript:goList('shoes')">SHOES</a></li>				
-		</ul>
-
-		<!--media toggle:hidden now-->
-		<label>
-			<input type='checkbox'>
-			<span class='menu'>
-				<span class='hamburger'></span>
-			</span>
-
-			<ul id="labelul">
-				<li><a href="javascript:goList('outer')">OUTER</a></li>
-				<li><a href="javascript:goList('top')">TOP</a></li>
-				<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
-				<li><a href="javascript:goList('acc')">ACC</a></li>
-				<li><a href="javascript:goList('shoes')">SHOES</a></li>
-			</ul>
-
-		</label>
-		
-		<div class="search" style="font-size:1.7em; color:Tomato">				
-			<span class="searchbox">	
-		    <input type="search" placeholder="Search..." />
-			</span>
-			<i class="fa fa-search"></i>				
-		</div>
-
-		<div id="icon" style="font-size:1.5em;">	
-			<a href="#"><i class="far fa-heart"></i></a>
-			<a href="login.html"><i class="far fa-user-circle"></i></a>
-		</div>
-
-	</div>
-</header>
+<iframe src="header.html" frameborder="0" width="100%" height="auto" scrolling="no"></iframe>
 
 <!--container-->
 <div class="container">
@@ -131,7 +87,7 @@
 				</div>
 			</div>
 		</div>		<!-- 1행  끝-->
-
+		<div class="blank-line"></div>
 		<!-- 2 행 -->
 		<div class="row">
 			<div class="col-xs-6 col-sm-3">			
@@ -191,7 +147,7 @@
 				</div>
 			</div>
 		</div>		<!-- 2행  끝-->
-
+		<div class="blank-line"></div>
 		<!-- 3 행 -->
 		<div class="row">
 			<div class="col-xs-6 col-sm-3">			
@@ -251,27 +207,13 @@
 				</div>
 			</div>
 		</div>		<!-- 3행  끝-->
-
+		<div class="blank-line"></div>
 	</div>
 
 </div>
 <!--container-->
 <!--footer-->
-<footer id="footer1">
-	<div id="fwarper">
-		<ul id="lists">
-			<li><a href="#">About us</a></li>
-			<li><a href="#">Shipping Information</a></li>
-			<li><a href="#">Return & Exchanges</a></li>
-		</ul>
-
-		<div id="btn">
-			<p><a href="#">CONTACT & HELP</a></p>
-			<p><a href="#">FOLLOW US</a></p>
-		</div>
-
-	</div>
-</footer>
+<iframe src="footer.html" frameborder="0" width="100%" height="auto" scrolling="no"></iframe>
 <!--end of footer-->
 
 <script src="js/jquery-3.3.1.js"></script>
@@ -324,7 +266,7 @@
 			var imageNm="0"+(i+1);
 			imageNm=imageNm.substring(imageNm.length-2, imageNm.length)+".jpg";
 			console.log("imageNm : " + imageNm);
-			$($(".grid-list-item-image")[i]).find(".item-image").attr("src", "image/"+aStyleItem+"/"+imageNm);
+			$($(".grid-list-item-image")[i]).find(".item-image").attr("src", "image/"+aStyleItem+"/"+imageNm).attr("id", "itemIndex"+i);
 			
 			var obj=itemInfo[i];
 			$($(".grid-list-item-info")[i]).find(".item-title1").text(obj.title1);
@@ -359,10 +301,16 @@
 		$(this).find(".item-image").css("transform", "scale(1");
 	});
 
-	function goList(arg){
-		localStorage.aStyleItem=arg;
-		location.href="itemList.html";
-	};
+	//상품 클릭시 상세 페이지 이동
+	$(".grid-list-item a").on("click", function(){
+		console.log("click");
+		
+		var id=$(this).find(".item-image").attr("id");
+		var index=id.substring(9,12);
+		console.log("id:"+id+ " / index :" + index);
+		localStorage.aStyleItemIndex=index;
+		location.href="itemView.html";
+	});
 </script>
 </body>
 </html>
