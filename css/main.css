@@ -90,9 +90,11 @@ body{
 
 .cool-link:hover::after {
     width: 100%;
-    //transition: width .3s;
 }
-
+.cool-link-active{
+    padding-bottom: 3px;
+    border-bottom: 3px solid orange;
+}
 #hwraper a:link,
 #hwraper a:visited{
    color:#000;

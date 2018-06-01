@@ -306,7 +306,14 @@
 	 	$("#sub-menu-category-image")
 		.attr("src", "image/"+aStyleItem+"/t00.png")
 		.css("left", "15%").fadeIn();
-	 });
+	});
+
+	$(".cool-link").each(function(index){
+		var link=$(this).text().toLowerCase();
+		if(link==aStyleItem){
+			$(this).addClass("cool-link-active");
+		}		
+	});
 
 	var imageLoad=[false, false, false];
 	
