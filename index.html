@@ -217,35 +217,65 @@
 		}
 	});
 
-	function imagesLeftAni($input){
-		$input.show(function(){
-			$input.children(".img_area").addClass("animated slideInUp").fadeIn({
-				duration:1500,
-				complete:function(){
-					$(this).children(".cover").addClass("animated slideOutRight").fadeOut(function(){
-						$(".ment_area").fadeIn(1000,function(){
-							$(".showDetails").css("display","flex").addClass("animated slideInLeft");
-						}).addClass("animated slideInRight");
-					});
-				}
-			});
-		});	
-	};
+	  function imagesLeftAni($input){
+      $input.show(function(){
+         $input.children(".img_area").fadeIn({
+            duration:1500,
+            complete:function(){
+               $(this).children().addClass("animated slideInLeft").fadeIn(function(){
+                  $input.children(".ment_area").fadeIn(1200,function(){
+                     $input.children(".showDetails").css("display","flex").addClass("animated slideInLeft");
+                  }).addClass("animated slideInRight");
+               });
+            }
+         });
+      });   
+   };
 
-	function imagesRightAni($input){
-		$input.show(function(){
-			$input.children(".img_area").fadeIn({
-				duration:1500,
-				complete:function(){
-					$(this).children().addClass("animated slideInLeft").fadeIn(function(){
-						$(".ment_area").fadeIn(1000,function(){
-							$(".showDetails").css("display","flex").addClass("animated slideInLeft");
-						}).addClass("animated slideInRight");
-					});
-				}
-			});
-		});	
-	};
+
+   function imagesRightAni($input){
+      $input.show(function(){
+         $input.children(".img_area").fadeIn({
+            duration:1500,
+            complete:function(){
+               $(this).children().addClass("animated slideInRight").fadeIn(function(){
+                  $input.children(".ment_area").fadeIn(1200,function(){
+                     $input.children(".showDetails").css("display","flex").addClass("animated slideInLeft");
+                  }).addClass("animated slideInLeft");
+               });
+            }
+         });
+      });   
+   };
+	// function imagesLeftAni($input){
+	// 	$input.show(function(){
+	// 		$input.children(".img_area").addClass("animated slideInUp").fadeIn({
+	// 			duration:1500,
+	// 			complete:function(){
+	// 				$(this).children(".cover").addClass("animated slideOutRight").fadeOut(function(){
+	// 					$input.children(".ment_area").fadeIn(1000,function(){
+	// 						$input.children(".showDetails").css("display","flex").addClass("animated slideInLeft");
+	// 					}).addClass("animated slideInRight");
+	// 				});
+	// 			}
+	// 		});
+	// 	});	
+	// };
+
+	// function imagesRightAni($input){
+	// 	$input.show(function(){
+	// 		$input.children(".img_area").fadeIn({
+	// 			duration:1500,
+	// 			complete:function(){
+	// 				$(this).children().addClass("animated slideInLeft").fadeIn(function(){
+	// 					$(".ment_area").fadeIn(1000,function(){
+	// 						$(".showDetails").css("display","flex").addClass("animated slideInLeft");
+	// 					}).addClass("animated slideInRight");
+	// 				});
+	// 			}
+	// 		});
+	// 	});	
+	// };
 
 	function goList(arg){
 		localStorage.aStyleItem=arg;
