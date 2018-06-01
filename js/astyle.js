@@ -1,8 +1,8 @@
 	// 상단 돋보기
     $(".fa-search").click(function() {
        $(".searchbox").toggle();
-       $("input[type='text']").val("");
-       $("input[type='text']").focus();
+       $("input[type='search']").val("");
+       $("input[type='search']").focus();
     });
 
 	// header의 카테고리 선택
@@ -13,7 +13,7 @@
 
 	// ===== Scroll to Top ==== 
 	$(window).scroll(function() {
-	    if ($(this).scrollTop() >= 150) {        // If page is scrolled more than 50px
+	    if ($(this).scrollTop() >= 130) {       // If page is scrolled more than 50px
 	        $('#return-to-top').fadeIn(200);    // Fade in the arrow
 	    } else {
 	        $('#return-to-top').fadeOut(200);   // Else fade out the arrow

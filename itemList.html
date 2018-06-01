@@ -260,7 +260,22 @@
 </div>
 <!--container-->
 <!--footer-->
-<iframe src="footer.html" frameborder="0" width="100%" height="auto" scrolling="no"></iframe>
+<footer id="footer1">
+	<div id="fwarper">
+		<ul id="lists">
+			<li><a href="#">About us</a></li>
+			<li><a href="#">Shipping Information</a></li>
+			<li><a href="#">Return & Exchanges</a></li>
+		</ul>
+
+		<div id="btn">
+			<p><a href="#">CONTACT & HELP</a></p>
+			<p><a href="#">FOLLOW US</a></p>
+		</div>
+
+	</div>
+</footer>
+<!--end of footer-->
 
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>	
@@ -270,7 +285,7 @@
 	var itemInfo=[
 		{title1:"BONSAI BAG LARGE",			title2:"SIMON MILLER",				price: "350,000원"},
 		{title1:"Rainbow Sequin Pouch",		title2:"Attico",					price:"220,000원"},
-		{title1:"Golden Clutch",			title2:"Golden Goose Deluxe",		price:"90,000원"},
+		{title1:"Golden Clutch",			title2:"Golden Goose Deluxe Brand",	price:"90,000원"},
 		{title1:"Bonsai Bag Mango",			title2:"Simon Miller",				price:"230,000원"},
 		{title1:"Leather Lunchbag Clutch",	title2:"Simon Miller",				price:"110,000원"},
 		{title1:"Gaia's Ark Jade",			title2:"Cult Gaia",					price:"210,000원"},
@@ -327,13 +342,13 @@
 	$(window).on("scroll", function(){
 		// 위쪽으로 스크롤된 길이 구하기
 		var scrollTop=$(window).scrollTop();
-		if(scrollTop>=130){
+		if(scrollTop>=120){
 			showItem(0);
 		}
-		if(scrollTop>=720){
+		if(scrollTop>=690){
 			showItem(1);	// 2행 이미지 불러오기
 		}
-		if(scrollTop>=1200){			
+		if(scrollTop>=1170){			
 			showItem(2);	// 3행 이미지 불러오기
 		}
 		console.log("scrollTop : "+scrollTop);
