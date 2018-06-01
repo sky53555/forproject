@@ -17,74 +17,100 @@
 
 
 <!--header-->
-	<header id="header1">
-		<div id="hwraper">
-		<!--logo-->
-			<h1 id="logo">
-				<a href="#"><img src="image/etc/logo.png"></a>
-			</h1>
+<header id="header1">
+	<div id="hwraper">
+	<!--logo-->
+		<h1 id="logo">
+			<a href="#"><img src="image/etc/logo.png"></a>
+		</h1>
 
-			<!--navi-->
-			<ul id="hnavi">
+		<!--navi-->
+		<ul id="hnavi">
+			<li><a href="javascript:goList('outer')">OUTER</a></li>
+			<li><a href="javascript:goList('top')">TOP</a></li>
+			<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
+			<li><a href="javascript:goList('acc')">ACC</a></li>
+			<li><a href="javascript:goList('shoes')">SHOES</a></li>
+		</ul>
+		
+		<!--media toggle:hidden now-->
+		<label>
+			<input type='checkbox'>
+			<span class='menu'>
+				<span class='hamburger'></span>
+			</span>
+
+			<ul id="labelul">
 				<li><a href="javascript:goList('outer')">OUTER</a></li>
 				<li><a href="javascript:goList('top')">TOP</a></li>
 				<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
 				<li><a href="javascript:goList('acc')">ACC</a></li>
 				<li><a href="javascript:goList('shoes')">SHOES</a></li>
 			</ul>
-			
-			<!--media toggle:hidden now-->
-			<label>
-				<input type='checkbox'>
-				<span class='menu'>
-					<span class='hamburger'></span>
-				</span>
 
-				<ul id="labelul">
-					<li><a href="javascript:goList('outer')">OUTER</a></li>
-					<li><a href="javascript:goList('top')">TOP</a></li>
-					<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
-					<li><a href="javascript:goList('acc')">ACC</a></li>
-					<li><a href="javascript:goList('shoes')">SHOES</a></li>
-				</ul>
+		</label>
 
-			</label>
-
-			<!--search icon-->
-			<div class="search" style="font-size:1.7em; color:Tomato">			
-				<span class="searchbox">	
-			    <input type="text" placeholder="Search..." />
-				</span>
-				<i class="fa fa-search"></i>			
-			</div>
-			
-			<!--icons-->
-			<div id="icon" style="font-size:1.5em;">	
-				<a href="#"><i class="far fa-heart"></i></a>
-				<a href="login.html"><i class="far fa-user-circle"></i></a>
-			</div>
-
+		<!--search icon-->
+		<div class="search" style="font-size:1.7em; color:Tomato">			
+			<span class="searchbox">	
+		    <input type="text" placeholder="Search..." />
+			</span>
+			<i class="fa fa-search"></i>			
 		</div>
-		<!--hwarper-->
-	</header>
-	<!--header-->
-	
-	<!--section-->
-	<div class="container">
-		<!-- 첫 번째 이미지 -->
-		<div class="row" id="first">
-			<div class="col-xs-6 img_area">
-				<img src="image/index/01.jpg">
-			</div>
-			<div class="col-xs-6 ment_area">
-				<img src="image/index/hotSummer.png">
-			</div>
-			<div class="showD_left showDetails show_ment">
-				<img src="image/index/right-arrow.png">&nbsp;<span class="glyphicon glyphicon-heart"></span>
-			</div>
-			<div class="showD_right showDetails show_ment">
-				<b>SHOW DETAILS&nbsp;</b>&nbsp;<span class="glyphicon glyphicon-heart" style="color: black;"></span>
-			</div>
+		
+		<!--icons-->
+		<div id="icon" style="font-size:1.5em;">	
+			<a href="#"><i class="far fa-heart"></i></a>
+			<a href="login.html"><i class="far fa-user-circle"></i></a>
+		</div>
+
+	</div>
+	<!--hwarper-->
+</header>
+
+<div class="container" id="indexBody">
+	<!-- 첫 번째 이미지 -->
+	<div class="row" id="first">
+		<div class="col-xs-6 img_area">
+			<div class="cover"></div>
+			<img src="image/index/01.jpg">
+		</div>
+		<div class="col-xs-6 ment_area">
+			<img src="image/index/hotSummer.png">
+		</div>
+		<div class="showD_left showDetails show_ment">
+			<img src="image/index/right-arrow.png">&nbsp;<span class="glyphicon glyphicon-heart"></span>
+		</div>
+		<div class="showD_right showDetails show_ment">
+			<b>SHOW DETAILS&nbsp;</b>&nbsp;<span class="glyphicon glyphicon-heart" style="color: black;"></span>
+		</div>
+	</div>
+	<!-- 공백 -->
+	<div class="spacer"></div>
+	<!-- 두 번째 이미지 -->
+	<div class="row" id="second">
+		<div class="col-xs-6 ment_area">
+			<img src="image/index/specialSale.png">
+		</div>
+		<div class="col-xs-6 img_area">
+			<img src="image/index/02.jpg">
+		</div>
+		<div class="showD_left showDetails show_ment">
+			<img src="image/index/right-arrow.png">&nbsp;<span class="glyphicon glyphicon-heart"></span>
+		</div>
+		<div class="showD_right showDetails show_ment">
+			<b>SHOW DETAILS&nbsp;</b>&nbsp;<span class="glyphicon glyphicon-heart" style="color: black;"></span>
+		</div>
+	</div>
+	<!-- 공백 -->
+	<div class="spacer"></div>
+	<!-- 세 번째 이미지 -->
+	<div class="row" id="third">
+		<div class="col-xs-6 img_area">
+			<img src="image/index/03.png">
+		</div>
+		<div class="col-xs-6 ment_area">
+			<img src="image/index/weeklyBest.png">
 		</div>
 		<!-- 공백 -->
 		<div class="spacer"></div>
@@ -124,27 +150,26 @@
 		</div>
 	</div>
 	<!--end of section-->
-
-	<!--footer-->
-	<footer id="footer1">
-		<div id="fwarper">
-
-			<ul id="lists">
-				<li><a href="#">About us</a></li>
-				<li><a href="#">Shipping Information</a></li>
-				<li><a href="#">Return & Exchanges</a></li>
-			</ul>
-
-			<div id="btn">
-				<p><a href="#">CONTACT & HELP</a></p>
-				<p><a href="#">FOLLOW US</a></p>
-			</div>
-
-		</div>
-	</footer>
-	<!--end of footer-->
 </div>
 <!--warper-->
+
+<!--footer-->
+<footer id="footer1">
+	<div id="fwarper">
+		<ul id="lists">
+			<li><a href="#">About us</a></li>
+			<li><a href="#">Shipping Information</a></li>
+			<li><a href="#">Return & Exchanges</a></li>
+		</ul>
+
+		<div id="btn">
+			<p><a href="#">CONTACT & HELP</a></p>
+			<p><a href="#">FOLLOW US</a></p>
+		</div>
+
+	</div>
+</footer>
+<!--end of footer-->
 
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>	
@@ -173,8 +198,7 @@
 	var idx=0;
 
 	// 로딩시 첫번째 이미지 출력
-	imagesAni($(imagesId[idx]));
-	idx++;
+	imagesLeftAni($(imagesId[idx]));
 
 	$(window).on("scroll", function(){
 		// 위쪽으로 스크롤 된 길이 구하기
@@ -184,16 +208,31 @@
 		// 총 이동한 스크롤 길이
 		var movedHeight = scrollTop+windowHeight;
 		if(movedHeight>=1000){
-			imagesAni($(imagesId[idx]));
-			idx++;
+			idx=1;
+			imagesRightAni($(imagesId[idx]));
 		}
-		if(movedHeight>=1800){
-			imagesAni($(imagesId[idx]));
-			idx++;
+		if(movedHeight>=2000){
+			idx=2;
+			imagesLeftAni($(imagesId[idx]));
 		}
 	});
 
-	function imagesAni($input){
+	function imagesLeftAni($input){
+		$input.show(function(){
+			$input.children(".img_area").addClass("animated slideInUp").fadeIn({
+				duration:1500,
+				complete:function(){
+					$(this).children(".cover").addClass("animated slideOutRight").fadeOut(function(){
+						$(".ment_area").fadeIn(1000,function(){
+							$(".showDetails").css("display","flex").addClass("animated slideInLeft");
+						}).addClass("animated slideInRight");
+					});
+				}
+			});
+		});	
+	};
+
+	function imagesRightAni($input){
 		$input.show(function(){
 			$input.children(".img_area").fadeIn({
 				duration:1500,

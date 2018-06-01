@@ -178,9 +178,11 @@ label{
 
 
 
-
 /*======================================*/
 
+#indexBody{
+	padding-top: 50px;
+}
 
 #first, #second, #third{
 	display: none;
@@ -189,13 +191,17 @@ label{
 
 .img_area{
 	padding: 0 !important;
-	background-color: rgb(249,234,206);
 	overflow: hidden;
 	display: none;
 	height: 700px;
 }
+
+.cover{
+	background-color: rgb(249,234,206);
+	height: 700px;
+}
 .img_area>img{
-	display: none;
+	/*display: none;*/
 	max-width: 100%;
 }
 
