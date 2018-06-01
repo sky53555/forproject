@@ -58,7 +58,7 @@
 		</div>
 
 		<div id="icon" style="font-size:1.5em;">	
-			<a href="#"><i class="far fa-heart"></i></a>
+			<a href="saveList.html"><i class="far fa-heart"></i></a>
 			<a href="login.html"><i class="far fa-user-circle"></i></a>
 		</div>
 
@@ -369,7 +369,7 @@
 		
 		var id=$(this).find(".item-image").attr("id");
 		var index=id.substring(9,12);
-		console.log("id:"+id+ " / index :" + index);
+		//console.log("id:"+id+ " / index :" + index);
 		localStorage.aStyleItemIndex=index;
 		location.href="itemView.html";
 	});
