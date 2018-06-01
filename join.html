@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<<meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>A style</title>
@@ -16,52 +16,142 @@
 		.form-control-feedback, .help-block{
 			display: none;
 		}
+		.btn_reg{
+			width: 100%;
+		    height: 70px;
+		    margin-top: 25px;
+		    background: #000;
+		    color: #fff;
+		    font-size: 22px;
+		    line-height: 60px;
+		    font-weight: 600;
+		}
+		.join_h{
+			border-bottom: 3px solid #333;
+			margin-bottom: 30px ;
+		}
 	</style>
 </head>
 <body>
-<div class="container">
-	<h3>A-style 회원가입</h3>
-	<form action="signup" id="myForm">
-		<div class="form-group has-feedback">
-			<label for="id" class="control-label">아이디</label>
-			<input type="text" class="form-control" id="id" />
-			<span class="glyphicon glyphicon-remove form-control-feedback"></span>
-			<span class="glyphicon glyphicon-ok form-control-feedback"></span>
-			<p id="idError1" class="help-block">특수 문자는 허용하지 않습니다.</p>
-			<p id="idError2" class="help-block">영문자로 시작하세요.</p>
-			<p id="idError3" class="help-block">최소 5글자 최대 10글자 이내로 입력하세요.</p>
+<!--header-->
+	<header id="header1">
+		<div id="hwraper">
+
+			<h1 id="logo">
+			<a href="index.html"><img src="image/etc/logo.png" alt="logo"></a>
+			</h1>
+			<!--navi-->
+			<ul id="hnavi">
+				<li><a href="javascript:goList('outer')">OUTER</a></li>
+				<li><a href="javascript:goList('top')">TOP</a></li>
+				<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
+				<li><a href="javascript:goList('acc')">ACC</a></li>
+				<li><a href="javascript:goList('shoes')">SHOES</a></li>
+			</ul>
+			
+			<!--media toggle:hidden now
+			<label>
+				<input type='checkbox'>
+				<span class='menu'>
+					<span class='hamburger'></span>
+				</span>
+
+				<ul id="labelul">
+					<li><a href="javascript:goList('outer')">OUTER</a></li>
+					<li><a href="javascript:goList('top')">TOP</a></li>
+					<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
+					<li><a href="javascript:goList('acc')">ACC</a></li>
+					<li><a href="javascript:goList('shoes')">SHOES</a></li>
+				</ul>
+
+			</label>-->
+
+			<div class="search" style="font-size:1.7em; color:Tomato">
+				
+				<span class="searchbox">	
+			    <input type="search" placeholder="Search..." />
+				</span>
+				<i class="fa fa-search"></i>
+				
+			</div>
+
+			<div id="icon" style="font-size:1.5em;">	
+				<a href="#"><i class="far fa-heart"></i></a>
+				<a href="login.html"><i class="far fa-user-circle"></i></a>
+			</div>
+
 		</div>
-		<div class="form-group has-feedback">
-			<label for="inputName" class="control-label">이름</label>
-			<input type="text" class="form-control" id="inputName" />
-			<span class="glyphicon glyphicon-remove form-control-feedback"></span>
-			<span class="glyphicon glyphicon-ok form-control-feedback"></span>
-			<p class="help-block">꼭 입력해주세요.</p>
-		</div>
-		<div class="form-group has-feedback">
-			<label for="email" class="control-label">이메일</label>
-			<input type="text" class="form-control" id="email" />
-			<span class="glyphicon glyphicon-remove form-control-feedback"></span>
-			<span class="glyphicon glyphicon-ok form-control-feedback"></span>
-			<p class="help-block">이메일 형식에 맞게 입력하세요.</p>
-		</div>
-		<div class="form-group has-feedback">
-			<label for="pwd1" class="control-label">비밀번호</label>
-			<input type="password" class="form-control" id="pwd1" />
-			<span class="glyphicon glyphicon-remove form-control-feedback"></span>
-			<span class="glyphicon glyphicon-ok form-control-feedback"></span>
-			<p id="pwdError1" class="help-block">아래와 동일한지 비밀번호를 확인하세요</p>
-			<p id="pwdError2" class="help-block">영문자와 숫자의 조합으로 비밀번호를 작성하세요.</p>
-		</div>
-		<div class="form-group has-feedback">
-			<label for="pwd2" class="control-label">비밀번호 확인</label>
-			<input type="password" class="form-control" id="pwd2" />
-			<span class="glyphicon glyphicon-remove form-control-feedback"></span>
-		</div>
-		<button class="btn btn-primary" type="submit">가입</button>
-		<button class="btn btn-warning" type="reset" id="resetBtn" >취소</button>
-	</form>
+	</header>
+<!--header end-->
+
+<div class="container" style="background:#eee;width:100%;">
+	<div class="center-block" style="width:500px;padding-bottom: 50px">
+
+		<div class="join_h"><h2 class="heading-xx-medium text-center">Join A style</h2></div>
+		
+		<form action="signup" id="myForm">
+			<div class="form-group has-feedback">
+				<label for="id" class="control-label">아이디</label>
+				<input type="text" class="form-control" id="id"  />
+				<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+				<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+				<p id="idError1" class="help-block">특수 문자는 허용하지 않습니다.</p>
+				<p id="idError2" class="help-block">영문자로 시작하세요.</p>
+				<p id="idError3" class="help-block">최소 5글자 최대 10글자 이내로 입력하세요.</p>
+			</div>
+			<div class="form-group has-feedback">
+				<label for="inputName" class="control-label">이름</label>
+				<input type="text" class="form-control" id="inputName" />
+				<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+				<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+				<p class="help-block">필수항목입니다.</p>
+			</div>
+			<div class="form-group has-feedback">
+				<label for="email" class="control-label">이메일</label>
+				<input type="text" class="form-control" id="email" />
+				<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+				<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+				<p class="help-block">이메일 형식에 맞게 입력하세요.</p>
+			</div>
+			<div class="form-group has-feedback">
+				<label for="pwd1" class="control-label">비밀번호</label>
+				<input type="password" class="form-control" id="pwd1" />
+				<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+				<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+				<p id="pwdError1" class="help-block">아래와 동일한지 비밀번호를 확인하세요</p>
+				<p id="pwdError2" class="help-block">영문자와 숫자의 조합으로 비밀번호를 작성하세요.</p>
+			</div>
+			<div class="form-group has-feedback">
+				<label for="pwd2" class="control-label">비밀번호 확인</label>
+				<input type="password" class="form-control" id="pwd2" />
+				<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+			</div>
+			<button class="btn btn_reg" type="submit">가입</button>
+			
+		</form>
+	</div>
 </div>
+
+<!--footer-->
+	<footer id="footer1">
+		<div id="fwarper">
+
+			<ul id="lists">
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Shipping Information</a></li>
+				<li><a href="#">Return & Exchanges</a></li>
+			</ul>
+
+			<div id="btn">
+				<p><a href="#">CONTACT & HELP</a></p>
+				<p><a href="#">FOLLOW US</a></p>
+			</div>
+
+		</div>
+	</footer>
+<!--footer end-->
+
+
 <script src="js/jquery-3.3.1.js"></script>
 <script>
 	(function(){
@@ -225,6 +315,16 @@
 			history.back();
 		});
 	})();	// (function(){ 의 end
+
+function goList(arg){
+		localStorage.aStyleItem=arg;
+		location.href="itemList.html";
+	};
+
 </script>
+
+
+
+
 </body>
 </html>
