@@ -117,6 +117,7 @@
 			saveList="[]";
 		}
 		var arr=JSON.parse(saveList);
+		console.log("arr:" + arr);
 		arr.push(itemIndex);
 		saveList=JSON.stringify(arr);
 		localStorage.aStyleSaveList=saveList;
