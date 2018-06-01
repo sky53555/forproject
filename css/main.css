@@ -78,6 +78,21 @@ body{
    font-weight: bold;
 }
 
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: orange;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+
 #hwraper a:link,
 #hwraper a:visited{
    color:#000;
@@ -85,7 +100,8 @@ body{
 
 }
 #hwraper #hnavi a:hover{
-   border-bottom:3px solid orange;
+   font-weight: bold;
+   animation: border 0.5s;
 }
 
 
@@ -180,7 +196,7 @@ body{
 #fwarper #lists li a:hover{
    text-decoration: none;
    font-weight: bold;
-
+  
 }
 
 #fwarper #btn{
