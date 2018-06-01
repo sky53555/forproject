@@ -1,3 +1,22 @@
+@media screen and (min-width: 800px){
+	#lists li{
+		
+	}
+
+	#fwarper #btn {
+		position:absolute;
+		right:30%;
+		bottom:20%;
+	}
+
+	#fwarper #btn p{
+
+
+	}
+}
+
+
+
 
 @media screen and (max-width: 800px) {
 	#hnavi {
@@ -14,12 +33,12 @@
 
 	@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
 	
-	label{
+	#mediaTog{
 		display:block !important;
 	}
 	
 
-	label .menu {
+	#mediaTog .menu {
 	  position: absolute;
 	  right: -30px;
 	  top: -40px;
@@ -32,7 +51,7 @@
 	  box-shadow: 0 0 0 0 #000, 0 0 0 0 #000;
 	  cursor: pointer;
 	}
-	label .hamburger {
+	#mediaTog .hamburger {
 	  position: absolute;
 	  top: 60px;
 	  left: 30px;
@@ -44,7 +63,7 @@
 	          transform-origin: center;
 	  transition: .5s ease-in-out;
 	}
-	label .hamburger:after, label .hamburger:before {
+	#mediaTog .hamburger:after, #mediaTog .hamburger:before {
 	  transition: .5s ease-in-out;
 	  content: "";
 	  position: absolute;
@@ -53,38 +72,38 @@
 	  height: 100%;
 	  background: #fff;
 	}
-	label .hamburger:before {
+	#mediaTog .hamburger:before {
 	  top: -10px;
 	}
-	label .hamburger:after {
+	#mediaTog .hamburger:after {
 	  bottom: -10px;
 	}
-	label input {
+	#mediaTog input {
 	  display: none;
 	}
-	label input:checked + .menu {
+	#mediaTog input:checked + .menu {
 	  box-shadow: 0 0 0 100vw #000, 0 0 0 100vh #000;
 	  border-radius: 0;
 
 	}
-	label input:checked + .menu .hamburger {
+	#mediaTog input:checked + .menu .hamburger {
 	  -webkit-transform: rotate(45deg);
 	          transform: rotate(45deg);
 	}
-	label input:checked + .menu .hamburger:after {
+	#mediaTog input:checked + .menu .hamburger:after {
 	  -webkit-transform: rotate(90deg);
 	          transform: rotate(90deg);
 	  bottom: 0;
 	}
-	label input:checked + .menu .hamburger:before {
+	#mediaTog input:checked + .menu .hamburger:before {
 	  -webkit-transform: rotate(90deg);
 	          transform: rotate(90deg);
 	  top: 0;
 	}
-	label input:checked + .menu + #labelul {
+	#mediaTog input:checked + .menu + #labelul {
 	  opacity: 1;
 	}
-	label #labelul {
+	#mediaTog #labelul {
 		z-index:100;
 	    position:absolute;
 	    top:220%;
@@ -99,7 +118,7 @@
 	}
 
 	
-	label #labelul a {
+	#mediaTog #labelul a {
 	margin:4em 0;
 	display: block;
 	color: #fff !important;
@@ -109,7 +128,7 @@
 
 	}
 
-	label #labelul li a:hover{
+	#mediaTog #labelul li a:hover{
 		color:#eee !important;
 		transform:scale(1.5);		
 	}
@@ -122,7 +141,8 @@
 	
 	#fwarper #btn {
 		position:absolute;
-		bottom:15%;
+		right:40%;
+		bottom:30%;
 	}
 
 	#fwarper #btn p{
@@ -130,4 +150,13 @@
 	text-align: center;
 	padding-top:15px;
 	}
+
+	#fwarper #btn p a{
+   letter-spacing: 2px;
+   text-decoration: none;
+   color:#656668;
+   transition:all 0.3s;
+   font-size:1.5rem;
+
+}
 }

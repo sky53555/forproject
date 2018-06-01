@@ -7,7 +7,32 @@
 
 }
 
+body{
+   overflow-x: hidden;
+}
+#return-to-top {
+    color:#000;
+    position: fixed;
+    bottom: 50px;
+    right: -30px;
+    width: 100px;
+    height: 50px;
+    font-size:1em;
+    display: block;
+    text-decoration: none;
+    display: none;c
+    transform:rotate(270deg);
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
 
+#return-to-top:hover {
+ transform: scale(1.2) rotate(-90deg) translate(10px);
+
+}
 /*header*/
 #header1{
    width:100%;
@@ -22,7 +47,7 @@
    width:80%;
 }
 
-label{
+#mediaTog{
    display:none !important;
 }
 
@@ -55,7 +80,7 @@ label{
 
 #hwraper #logo{
    position:absolute;
-   top:10%;
+   top:0;
    left:5%;
 }
 
@@ -136,7 +161,7 @@ label{
    color:#656668;
    text-decoration: none;
    letter-spacing: 1.5px;
-   font-size: 1.5rem;
+   font-size: 1.2rem;
    transition:all 0.3s;
 
 }
@@ -151,7 +176,7 @@ label{
    width:250px;
    text-align:center;
    float:right;
-   margin-top:5%;
+   margin-top:4%;
 
 }
 #fwarper #btn p{
@@ -167,7 +192,7 @@ label{
    text-decoration: none;
    color:#656668;
    transition:all 0.3s;
-   font-size:2rem;
+   font-size:1.6rem;
 
 }
 
