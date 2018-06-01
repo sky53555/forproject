@@ -60,14 +60,14 @@
 
 			<div id="icon" style="font-size:1.5em;">	
 				<a href="#"><i class="far fa-heart"></i></a>
-				<a href="#"><i class="far fa-user-circle"></i></a>
+				<a href="login.html"><i class="far fa-user-circle"></i></a>
 			</div>
 
 		</div>
 	</header>
 
 
-<div class="container" style="background:#eee">	
+<div class="container" style="background:#eee;width:100%;">	
 	
 	<div class="box-login" id="onload_fadein">
 
@@ -135,12 +135,14 @@ $(document).ready(function() {
 		    $("input[type='text']").focus();
 		    });
 		    
- 			//$().animate
-
- 			$("#onload_fadein").addClass("animated fadeInDown");        
+ 			
+ 			$("#onload_fadein").addClass("animated fadeInUp");        
  
         });
-
+function goList(arg){
+		localStorage.aStyleItem=arg;
+		location.href="itemList.html";
+	};
 </script>
 </body>
 </html>
