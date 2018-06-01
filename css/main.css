@@ -1,185 +1,184 @@
 
 /*전체*/
 *{
-	padding:0;
-	margin:0;
-	list-style:none;
+   padding:0;
+   margin:0;
+   list-style:none;
 
 }
 
 
 /*header*/
 #header1{
-	width:100%;
-	height:150px;
-	font-size:16px;
-	position:relative;
-	border-bottom:1px solid #000;
+   width:100%;
+   height:150px;
+   font-size:16px;
+   position:relative;
+   border-bottom:1px solid #000;
 
 }
 
 #hwraper{
-	width:80%;
+   width:80%;
 }
 
 label{
-	display:none !important;
+   display:none !important;
 }
 
 #hwraper #hnavi{
-	position:absolute;
-	right:15%;
-	top:60%;
+   position:absolute;
+   right:15%;
+   top:60%;
 }
 
 #hwraper #hnavi li{
-	float:left;
-	display:block;
-	padding-right:50px;
-	font-family: 'Poiret One', cursive;
-	font-size: 2rem;
-	letter-spacing: 2px;
+   float:left;
+   display:block;
+   padding-right:50px;
+   font-family: 'Poiret One', cursive;
+   font-size: 2rem;
+   letter-spacing: 2px;
 }
 
 #hwraper a:link,
 #hwraper a:visited{
-	color:#000;
-	text-decoration: none;
+   color:#000;
+   text-decoration: none;
 
 }
 #hwraper #hnavi a:hover{
-	border-bottom:3px solid orange;
-	font-weight: bold;
+   border-bottom:3px solid orange;
+   font-weight: bold;
 }
 
 
 #hwraper #logo{
-	position:absolute;
-	top:10%;
-	left:5%;
+   position:absolute;
+   top:10%;
+   left:5%;
 }
 
 #hwraper .search{
-	position:absolute;
-	top:15%;
-	right:4%;
-	cursor: pointer;
+   position:absolute;
+   top:15%;
+   right:4%;
+   cursor: pointer;
 }
 #hwraper .searchbox{
-	display:none;
-	
+   display:none;
+   
 }
 
 #hwraper .search input{
-	width:200px;
-	height:30px;
-	border-radius: 10px;
-	outline: none;
-	
+   width:200px;
+   height:30px;
+   border-radius: 10px;
+   outline: none;
+   
 }
 
 
 #hwraper #icon{
-	cursor: pointer;
+   cursor: pointer;
 }
 
 #hwraper #icon a:hover{
-	color:pink;
+   color:pink;
 }
  
 #logo img{
-	width:120px;
+   width:120px;
 }
 
 #hwraper #icon{
-	position:absolute;
-	right:3%;
-	top:55%;
+   position:absolute;
+   right:3%;
+   top:55%;
 }
 
 #hwraper #icon i{
-	padding-right:10px;
+   padding-right:10px;
 }
 
 ::placeholder{
-	font-size:1.8rem;
+   font-size:1.8rem;
 }
 
 
 /*footer*/
 #footer1{
-	height:170px;
-	position:relative;
-	border-top: 1px solid #000;
+   height:170px;
+   position:relative;
+   border-top: 1px solid #000;
 }
 
 #footer1 #fwarper{
-	width:60%;
-	margin:0 auto;
-	
+   width:60%;
+   margin:0 auto;
+   
 }
 
 #fwarper #lists{
-	width:500px;
-	float:left;
-	margin-top:10%;
-	
+   width:500px;
+   float:left;
+   margin-top:10%;
+   
 }
 
 #fwarper #lists li{
-	float:left;
+   float:left;
 
 }
 #fwarper #lists li a{
-	display:block;
-	padding-right:20px;
-	color:#656668;
-	text-decoration: none;
-	letter-spacing: 1.5px;
-	font-size: 1.5rem;
-	transition:all 0.3s;
+   display:block;
+   padding-right:20px;
+   color:#656668;
+   text-decoration: none;
+   letter-spacing: 1.5px;
+   font-size: 1.5rem;
+   transition:all 0.3s;
 
 }
 
 #fwarper #lists li a:hover{
-	text-decoration: none;
-	font-weight: bold;
+   text-decoration: none;
+   font-weight: bold;
 
 }
 
 #fwarper #btn{
-	width:250px;
-	text-align:center;
-	float:right;
-	margin-top:5%;
+   width:250px;
+   text-align:center;
+   float:right;
+   margin-top:5%;
 
 }
 #fwarper #btn p{
 
-	text-align: right;
-	padding-top:15px;
+   text-align: right;
+   padding-top:15px;
 
 
 }
 
 #fwarper #btn p a{
-	letter-spacing: 2px;
-	text-decoration: none;
-	color:#656668;
-	transition:all 0.3s;
-	font-size:2rem;
+   letter-spacing: 2px;
+   text-decoration: none;
+   color:#656668;
+   transition:all 0.3s;
+   font-size:2rem;
 
 }
 
 #fwarper #btn p a:hover{
-	color:#000;
-	font-weight: bold;
+   color:#000;
+   font-weight: bold;
 }
 
 
 
 /*======================================*/
-
 #indexBody{
 	padding-top: 50px;
 }
@@ -196,22 +195,39 @@ label{
 	height: 700px;
 }
 
-.cover{
-	background-color: rgb(249,234,206);
-	height: 700px;
+#third .img_area{
+	height: 600px;
 }
+
+.cover{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#first .cover{
+	background-color: rgb(249,234,206);
+}
+
+#third .cover{
+	background-color: rgb(192,166,191);
+}
+
 .img_area>img{
-	/*display: none;*/
 	max-width: 100%;
 }
 
 .ment_area{
 	display: none;
-	position: absolute;
-	right: 100px;
 	background-color: white;
 	height: 500px;
 	box-shadow: 5px 0px 10px 2px rgb(153,153,153);
+}
+
+#third .ment_area{
+	height: 400px;
 }
 
 .ment_area>img{
@@ -256,15 +272,15 @@ label{
 	height: 50px;
 }
 
-.show_ment{
-	background-color: black;
-	color: white;
-}
-.reverse_ment{
-	background-color: white;
-	color: black;
+#third .showD_left{
+	top: 300px;
+	left: 432px;
 }
 
-.spacer{
-	height: 150px;
+#third .showD_right{
+	top: 300px;
+	left: 532px;
 }
+
+.show_ment{
+	background-color: black;
