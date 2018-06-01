@@ -15,58 +15,10 @@
 </head>
 </head>
 <body>
-
 <!--header-->
-	<header id="header1">
-		<div id="hwraper">
+<iframe src="header.html" frameborder="0" width="100%" height="auto" scrolling="no"></iframe>
 
-			<h1 id="logo">
-			<a href="index.html"><img src="image/etc/logo.png" alt="logo"></a>
-			</h1>
-			<!--navi-->
-			<ul id="hnavi">
-				<li><a href="javascript:goList('outer')">OUTER</a></li>
-				<li><a href="javascript:goList('top')">TOP</a></li>
-				<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
-				<li><a href="javascript:goList('acc')">ACC</a></li>
-				<li><a href="javascript:goList('shoes')">SHOES</a></li>
-			</ul>
-			
-			<!--media toggle:hidden now-->
-			<label>
-				<input type='checkbox'>
-				<span class='menu'>
-					<span class='hamburger'></span>
-				</span>
-
-				<ul id="labelul">
-					<li><a href="javascript:goList('outer')">OUTER</a></li>
-					<li><a href="javascript:goList('top')">TOP</a></li>
-					<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
-					<li><a href="javascript:goList('acc')">ACC</a></li>
-					<li><a href="javascript:goList('shoes')">SHOES</a></li>
-				</ul>
-
-			</label>
-
-			<div class="search" style="font-size:1.7em; color:Tomato">
-				
-				<span class="searchbox">	
-			    <input type="search" placeholder="Search..." />
-				</span>
-				<i class="fa fa-search"></i>
-				
-			</div>
-
-			<div id="icon" style="font-size:1.5em;">	
-				<a href="#"><i class="far fa-heart"></i></a>
-				<a href="login.html"><i class="far fa-user-circle"></i></a>
-			</div>
-
-		</div>
-	</header>
-
-
+<!--container-->
 <div class="container" style="background:#eee;width:100%;">	
 	
 	<div class="box-login" id="onload_fadein">
@@ -104,45 +56,15 @@
 </div><!--//container end-->
 
 <!--footer-->
-	<footer id="footer1">
-		<div id="fwarper">
-
-			<ul id="lists">
-				<li><a href="#">About us</a></li>
-				<li><a href="#">Shipping Information</a></li>
-				<li><a href="#">Return & Exchanges</a></li>
-			</ul>
-
-			<div id="btn">
-				<p><a href="#">CONTACT & HELP</a></p>
-				<p><a href="#">FOLLOW US</a></p>
-			</div>
-
-		</div>
-	</footer>
-</div>
-<!--warper-->
+<iframe src="footer.html" frameborder="0" width="100%" height="auto" scrolling="no"></iframe>
 
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.js"></script>	
 <script>
-
-$(document).ready(function() {
-     		
-            $(".fa-search").click(function() {
-		    $(".searchbox").toggle();
-		    $("input[type='text']").val("");
-		    $("input[type='text']").focus();
-		    });
-		    
- 			
- 			$("#onload_fadein").addClass("animated fadeInUp");        
+	$(document).ready(function() {
+		$("#onload_fadein").addClass("animated fadeInUp");        
  
-        });
-function goList(arg){
-		localStorage.aStyleItem=arg;
-		location.href="itemList.html";
-	};
+    });
 </script>
 </body>
 </html>
