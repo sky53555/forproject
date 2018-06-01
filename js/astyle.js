@@ -1,3 +1,16 @@
+	// 상단 돋보기
+    $(".fa-search").click(function() {
+       $(".searchbox").toggle();
+       $("input[type='text']").val("");
+       $("input[type='text']").focus();
+    });
+
+	// header의 카테고리 선택
+	function goList(arg){
+		localStorage.aStyleItem=arg;
+		location.href="itemList.html";
+	};
+
 	// ===== Scroll to Top ==== 
 	$(window).scroll(function() {
 	    if ($(this).scrollTop() >= 150) {        // If page is scrolled more than 50px

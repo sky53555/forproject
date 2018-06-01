@@ -32,7 +32,7 @@
 		<!--media toggle:hidden now-->
 		<div id="mediaTog">
   			<label>
-  			<input type='checkbox'>
+  			<input id="mediaCheck" type='checkbox'>
  				<span class='menu'>
     				<span class='hamburger'></span>
   				</span>
@@ -76,6 +76,20 @@
 		localStorage.aStyleItem=arg;
 		top.location.href="itemList.html";
 	};
+
+	$("#mediaCheck").click(function(){
+		console.log("ddd");
+		console.log($(parent).find("body"));
+		var isChecked=$(this).prop("checked");
+		//$("body").attr("height", "1000px");
+		//parent.iframeHeightReSize(isChecked);
+		// if(isChecked){
+		// 	ifrmHeader
+		// 	console.log("메뉴 보임");
+		// }else{
+		// 	console.log("메뉴 안보임");
+		// }
+	});
 </script>
 </body>
 </html>
