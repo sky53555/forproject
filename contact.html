@@ -25,6 +25,55 @@
 	</style>
 </head>
 <body>
+<!--TO TOP-->
+<a href="javascript:" id="return-to-top"> <span>TO TOP <i class="fas fa-long-arrow-alt-up"></i> </span></a>
+
+<!--header-->
+<header id="header1">
+  <div id="hwraper">
+
+    <h1 id="logo">
+    <a href="index.html"><img src="image/etc/logo.png" alt="logo"></a>
+    </h1>
+    <ul id="hnavi">
+      <li><a href="javascript:goList('outer')" class="cool-link">OUTER</a></li>
+      <li><a href="javascript:goList('top')" class="cool-link">TOP</a></li>
+      <li><a href="javascript:goList('bottom')" class="cool-link">BOTTOM</a></li>
+      <li><a href="javascript:goList('acc')" class="cool-link">ACC</a></li>
+      <li><a href="javascript:goList('shoes')" class="cool-link">SHOES</a></li>           
+    </ul>
+
+    <!--media toggle:hidden now-->
+    <div id="mediaTog">
+        <label>
+        <input id="mediaCheck" type='checkbox'>
+        <span class='menu'>
+            <span class='hamburger'></span>
+          </span>
+      <ul id="labelul">
+        <li><a href="javascript:goList('outer')">OUTER</a></li>
+        <li><a href="javascript:goList('top')">TOP</a></li>
+        <li><a href="javascript:goList('bottom')">BOTTOM</a></li>
+        <li><a href="javascript:goList('acc')">ACC</a></li>
+        <li><a href="javascript:goList('shoes')">SHOES</a></li>
+      </ul>
+        </label>
+    </div>
+    
+    <div class="search" >       
+      <span class="searchbox">  
+        <input type="search" placeholder="Search..." />
+      </span>
+      <i class="fa fa-search" style="font-size:1.7em; color:Tomato"></i>        
+    </div>
+
+    <div id="icon" style="font-size:1.5em;">  
+      <a href="saveList.html"><i class="far fa-heart"></i></a>
+      <a href="login.html"><i class="far fa-user-circle"></i></a>
+    </div>
+
+  </div>
+</header>
 
 <div class="container">
   <h1 class="text-left">CONTACT</h1>
@@ -58,10 +107,28 @@
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.307189910494!2d126.97975183672963!3d37.56761884836856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2ee8d4fdfa5%3A0x1cabf68fd19169f8!2z7JeQ7J207L2YIOyVhOy5tOuNsOuvuCDsooXroZzshLzthLA!5e0!3m2!1sko!2skr!4v1528078074338" width="100%" height="450" frameborder="0"></iframe>
 
 
+<!--footer-->
+<footer id="footer1">
+  <div id="fwarper">
+    <ul id="lists">
+      <li><a href="aboutus.html">About us</a></li>
+      <li><a href="#">Shipping Information</a></li>
+      <li><a href="#">Return & Exchanges</a></li>
+    </ul>
 
+    <div id="btn">
+      <p><a href="contact.html">CONTACT & HELP</a></p>
+      <p><a href="#">FOLLOW US</a></p>
+    </div>
+
+  </div>
+</footer>
+<!--end of footer-->
 </body>
-
-
+<script>
+   delete localStorage.aStyleItem;
+</script>
 <script src="js/astyle.js"></script> 
+
 </body>
 </html>
