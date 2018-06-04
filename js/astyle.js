@@ -8,7 +8,7 @@
 	// header의 카테고리 선택
 	function goList(arg){
 		localStorage.aStyleItem=arg;
-		localStorage.aStylePage=1;
+		localStorage.aStylePage="1";
 		location.href="itemList.html";
 	};
 

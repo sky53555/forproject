@@ -320,7 +320,7 @@
 	var itemRow2=true;
 	var itemRow3=true;
 
-	if(currentPage=totalPage){
+	if(currentPage==totalPage){
 		var itemCnt=((currentPage-1)*12);
 		if(itemCnt>itemInfo.length){
 			itemRow1=false;
@@ -333,7 +333,7 @@
 			itemRow3=false;
 		}
 
-		console.log(itemRow1 +"="+itemRow2 +"="+itemRow3 +"=");
+		console.log(currentPage+"="+itemRow1 +"="+itemRow2 +"="+itemRow3 +"=");
 		if(!itemRow1){
 			$(".grid-list-item-row1").remove();
 		}
@@ -396,8 +396,8 @@
 			$($(".grid-list-item-image")[i]).find(".item-image").attr("src", "image/"+aStyleItem+"/"+imageNm).attr("id", "itemIndex"+itemIdx);
 			
 			var obj=itemInfo[itemIdx];
-			$($(".grid-list-item-info")[i]).find(".item-title1").text(obj.title1);
-			$($(".grid-list-item-info")[i]).find(".item-title2").text(obj.title2);
+			$($(".grid-list-item-info")[i]).find(".item-title1").text(obj.title1.toUpperCase());
+			$($(".grid-list-item-info")[i]).find(".item-title2").text(obj.title2.toUpperCase());
 			$($(".grid-list-item-info")[i]).find(".item-price").text(obj.price);
 
 			$($(".grid-list-item")[i]).css("margin-top","10px").fadeIn();
