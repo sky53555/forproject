@@ -352,9 +352,10 @@
 	$(window).on("resize", function(){		// = $(window).resize(function(){});
 		// 창의 폭과 높이 얻어오기
 		var width=$(this).width();
-		var height=$(this).height();
-
-		console.log("width:"+width+" height:"+height);
+		if(width<750){
+			$(window).trigger('scroll');
+		}
+		
 	});
 
 
@@ -366,7 +367,7 @@
 		var width=$(window).width();
 
 		console.log("scrollTop : "+scrollTop +" / width : " +width);
-		if(width>700){
+		if(width>750){
 			if(itemRow1&&scrollTop>=120){
 				showItem(0);
 			}
@@ -503,6 +504,8 @@
 
 	// 윈도우 scroll 이벤트 발생
 	$(window).trigger('scroll');
+
+	//페이징 시 아이템 첫행으로 anchor 이동
 	var aStylePaging=localStorage.aStylePaging;
 	if(aStylePaging=="1"){
 		location.href="#itemRowTop";
