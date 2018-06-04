@@ -18,8 +18,17 @@
          padding: 0;
       }
  
+      #itemImgDiv{
+         overflow: hidden;
+      }
+
       #itemImgDiv img{
          max-width: 100%
+      }
+
+      #itemImgDiv img:hover{
+         transform: scale(1.1);
+         cursor: zoom-in;
       }
 
       #infoDiv{
@@ -120,10 +129,22 @@
          padding: 50px 0;
       }
 
+      #bigImg{
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+      }
+
+      #bigImg:hover{
+         cursor: zoom-out;
+      }
    </style>
 </head>
 
 <body>
+   <img id="bigImg" src="">
+   
 <!--TO TOP-->
 <a href="javascript:" id="return-to-top"> <span>TO TOP <i class="fas fa-long-arrow-alt-up"></i> </span></a>
 
@@ -179,7 +200,7 @@
    <div class="row" id="one">
       <!-- item 이미지 div -->
       <div class="col-sm-6" id="itemImgDiv">
-         <img src="image/index/01.jpg">
+         <img src="">
       </div>
       <!-- item 상세정보 div -->
       <div class="col-sm-6" id="infoDiv">  
@@ -364,13 +385,13 @@
 <footer id="footer1">
    <div id="fwarper">
       <ul id="lists">
-         <li><a href="aboutus.html">About us</a></li>
+         <li><a href="#">About us</a></li>
          <li><a href="#">Shipping Information</a></li>
          <li><a href="#">Return & Exchanges</a></li>
       </ul>
 
       <div id="btn">
-         <p><a href="contact.html">CONTACT & HELP</a></p>
+         <p><a href="#">CONTACT & HELP</a></p>
          <p><a href="#">FOLLOW US</a></p>
       </div>
 
@@ -390,6 +411,7 @@
    var imageNm="0"+(aStyleItemIndex+1);
    imageNm=imageNm.substring(imageNm.length-2, imageNm.length)+".jpg";
    $("#itemImgDiv>img").attr("src","image/"+aStyleItem+"/"+imageNm);
+   $("#bigImg").attr("src","image/"+aStyleItem+"/"+imageNm);
 
    // 상품 정보를 저장하는 변수
    var itemN=itemInfo[aStyleItemIndex].title1.toUpperCase();
@@ -460,6 +482,16 @@
     $("#buyDiv a").click(function(){
       $("#myModal").modal("show");
    });
+
+   // 이미지 클릭시 확대해서 보여 줌
+   $("#itemImgDiv>img").click(function(){
+      $("#bigImg").show();
+   })
+
+   // 확대 된 이미지 클릭시 상품 정보가 보이도록
+   $("#bigImg").click(function(){
+      $(this).hide();
+   })
 
    // 모달이 완전히 보여 졌을때 실행할 함수 등록 
    $("#myModal").on("shown.bs.modal", function(){});
