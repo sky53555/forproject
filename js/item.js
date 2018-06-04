@@ -112,7 +112,7 @@
 		currentPage="1";
 	}
 	currentPage=parseInt(currentPage);
-	console.log("currentPage :"+currentPage);
+	//console.log("currentPage :"+currentPage);
 	if(aStyleItem=="outer"){
 		itemInfo=outerInfo;
 	}else if(aStyleItem=="top"){

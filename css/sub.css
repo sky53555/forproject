@@ -11,16 +11,60 @@
 #sub-menu-category-image{
   position:absolute;
   left: -800px;
-  max-height: 50%;
+  max-width: 38%;
   transition: left 0.5s linear;
   z-index: 50;
 }
 #sub-menu-image{
   position:absolute;  
   left: 90%;
-  max-height: 100%;
+  max-width: 75%;
   transition: left 0.6s linear;
   z-index: 20;
+}
+@media screen and (max-width: 980px) {
+  .sub-menu{
+    height: 400px;
+  }
+  #sub-menu-category-image{
+    max-width: 40%;
+  }
+  #sub-menu-image{
+    max-width: 90%;
+  }  
+}
+@media screen and (max-width: 700px) {
+  .sub-menu{
+    height: 300px;
+  }
+  #sub-menu-category-image{
+    max-width: 40%;
+  }
+  #sub-menu-image{
+    max-width: 90%;
+  }  
+}
+@media screen and (max-width: 600px) {
+  .sub-menu{
+    height: 240px;
+  }
+  #sub-menu-category-image{
+    max-width: 40%;
+  }
+  #sub-menu-image{
+    max-width: 90%;
+  }  
+}
+@media screen and (max-width: 450px) {
+  .sub-menu{
+    height: 200px;
+  }
+  #sub-menu-category-image{
+    max-width: 40%;
+  }
+  #sub-menu-image{
+    max-width: 90%;
+  }  
 }
 .grid-list-item{
   width: 100%;
