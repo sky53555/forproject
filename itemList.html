@@ -352,11 +352,11 @@
 		var itemIdx=start+((currentPage-1)*12)-1;
 		console.log("start :" + start);
 		for (var i=start;i<start+4;i++){
-			console.log("i :"+i+"// .grid-list-item-image).length" + $(".grid-list-item-image").length)
-			if(i>=$(".grid-list-item-image").length){
+			//console.log("i :"+i+"// .grid-list-item-image).length" + $(".grid-list-item-image").length)
+			itemIdx++;			
+			if(itemIdx>=$(itemInfo).length){
 				return;
 			}
-			itemIdx++;			
 			$($(".grid-list-item")[i]).hide();
 
 			var imageNm="0"+(itemIdx+1);
