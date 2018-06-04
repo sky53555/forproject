@@ -24,6 +24,9 @@
 </head>
 
 <body>
+<!--TO TOP-->
+<a href="javascript:" id="return-to-top"> <span>TO TOP <i class="fas fa-long-arrow-alt-up"></i> </span></a>
+
 <!--header-->
 <header id="header1">
    <div id="hwraper">
@@ -41,19 +44,19 @@
 
       <!--media toggle:hidden now-->
       <div id="mediaTog">
-           <label>
-           <input id="mediaCheck" type='checkbox'>
-             <span class='menu'>
-                <span class='hamburger'></span>
-              </span>
-          <ul id="labelul">
+         <label>
+         <input id="mediaCheck" type='checkbox'>
+            <span class='menu'>
+               <span class='hamburger'></span>
+            </span>
+         <ul id="labelul">
             <li><a href="javascript:goList('outer')">OUTER</a></li>
             <li><a href="javascript:goList('top')">TOP</a></li>
             <li><a href="javascript:goList('bottom')">BOTTOM</a></li>
             <li><a href="javascript:goList('acc')">ACC</a></li>
             <li><a href="javascript:goList('shoes')">SHOES</a></li>
          </ul>
-          </label>
+         </label>
       </div>
       
       <div class="search" >            
@@ -63,13 +66,14 @@
          <i class="fa fa-search" style="font-size:1.7em; color:Tomato"></i>            
       </div>
 
-      <div id="icon" style="font-size:1.5em;">   
-         <a href="#"><i class="far fa-heart"></i></a>
+      <div id="icon" style="font-size:1.5em;">  
+         <a href="saveList.html"><i class="far fa-heart"></i></a>
          <a href="login.html"><i class="far fa-user-circle"></i></a>
       </div>
 
    </div>
 </header>
+
 
 <!--container-->
 <div class="container">
@@ -121,13 +125,13 @@
 <footer id="footer1">
    <div id="fwarper">
       <ul id="lists">
-         <li><a href="#">About us</a></li>
+         <li><a href="aboutus.html">About us</a></li>
          <li><a href="#">Shipping Information</a></li>
          <li><a href="#">Return & Exchanges</a></li>
       </ul>
 
       <div id="btn">
-         <p><a href="#">CONTACT & HELP</a></p>
+         <p><a href="contact.html">CONTACT & HELP</a></p>
          <p><a href="#">FOLLOW US</a></p>
       </div>
 
@@ -140,7 +144,7 @@
 <script src="js/astyle.js"></script>
 <script src="js/item.js"></script>  
 <script>
-   
+
    var saveList=localStorage.aStyleSaveList;
    if (saveList==undefined){
       saveList="[]";
@@ -152,7 +156,9 @@
    var  itmeIn = function(arr){
 
       $("#item-num").text(arr.length);
-
+      if(arr.length==0){
+         $(".cart").css("height", "350px");
+      }
       for(var i=0; i<arr.length; i++){
       
          if(arr[i].Item=="outer"){
