@@ -256,26 +256,23 @@
 		</div>		<!-- 3행  끝-->
 		<div class="blank-line"></div>
 	</div>
+	
 	<!-- 페이징 -->
-    <ul class="list--inline pagination">
-	  	<li>
-	      <div class="btn btn--secondary btn--narrow btn--disabled btn-prev">
-	        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 7.687 11.483"><polygon points="6.346,11.483 7.688,10 2.981,5.741 7.688,1.483 6.346,0 0.001,5.741 "/></svg>
-	        <span class="icon__fallback-text">Previous</span>
-	      </div>    
-	  	</li>
-	  	<li class="pagination__text">
-		    Page 1 of 2
-	  	</li>
-	  	<li>    
-	      <a href="/collections/shoes?page=2" class="btn btn--secondary btn--narrow btn-next">
-	        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-right" viewBox="0 0 7.687 11.483"><polygon points="1.342,11.483 0,10 4.706,5.741 0,1.483 1.342,0 7.687,5.741 "/></svg>
-	        <span class="icon__fallback-text">Next</span>
-	      </a>    
-	  	</li>
-	</ul>
-
-
+	<div class="row grid-list-item-page">
+		<div class="col-xs-1 col-sm-9"></div>
+		<div class="col-xs-10 col-sm-3">
+			<ul>
+				<li>
+					<span class="fas fa-arrow-left"></span>
+				</li>
+				<li></li>
+				<li>
+					<span class="fas fa-arrow-right"></span>
+				</li>
+			</ul>
+		</div>
+		<div class="blank-line"></div>
+	</div>
 </div>
 <!--container-->
 <!--footer-->
@@ -301,6 +298,9 @@
 <script src="js/astyle.js"></script>	
 <script src="js/item.js"></script>	
 <script>
+
+	// ====  페이지 로딩시 처리 start ====
+	// 카테고리 이미지
 	$("#sub-menu-image")	
 	.hide()
 	.attr("src", "image/"+aStyleItem+"/00.png")
@@ -313,29 +313,58 @@
 		.css("left", "15%").fadeIn();
 	});
 
+	// 페이징 처리
+
+	// ====  페이지 로딩시 처리 end  ====
+	console.log(currentPage+"="+totalPage);
+	if(totalPage>1){
+		$($(".grid-list-item-page li")[1]).text("Page "+currentPage+" of "+totalPage);
+
+		// prev page
+		if(currentPage>1){
+			$($(".grid-list-item-page li")[0]).addClass("grid-list-item-page-enabled");		
+		}
+		// next page
+		if(currentPage<totalPage){
+			$($(".grid-list-item-page li")[2]).addClass("grid-list-item-page-enabled");
+		}
+	} else {
+		$(".grid-list-item-page").remove();
+	}
+
+	$(".grid-list-item-page .fa-arrow-right").click(function(){
+		goPage(currentPage+1);
+	});
+	$(".grid-list-item-page .fa-arrow-left").click(function(){
+		goPage(currentPage-1);		
+	});
+
+	// 아이템 행별 보여주기
 	var imageLoad=[false, false, false];
 	
 	function showItem(row){
 		if(imageLoad[row]){
 			return;
 		}
-		
+
 		imageLoad[row]=true;
 		var start=row*4;
-		console.log(start);
+		var itemIdx=start+((currentPage-1)*12)-1;
+		console.log("start :" + start);
 		for (var i=start;i<start+4;i++){
-			//console.log("i :"+i+"// .grid-list-item-image).length" + $(".grid-list-item-image").length)
+			console.log("i :"+i+"// .grid-list-item-image).length" + $(".grid-list-item-image").length)
 			if(i>=$(".grid-list-item-image").length){
 				return;
 			}
+			itemIdx++;			
 			$($(".grid-list-item")[i]).hide();
 
-			var imageNm="0"+(i+1);
+			var imageNm="0"+(itemIdx+1);
 			imageNm=imageNm.substring(imageNm.length-2, imageNm.length)+".jpg";
 			//console.log("imageNm : " + imageNm);
-			$($(".grid-list-item-image")[i]).find(".item-image").attr("src", "image/"+aStyleItem+"/"+imageNm).attr("id", "itemIndex"+i);
+			$($(".grid-list-item-image")[i]).find(".item-image").attr("src", "image/"+aStyleItem+"/"+imageNm).attr("id", "itemIndex"+itemIdx);
 			
-			var obj=itemInfo[i];
+			var obj=itemInfo[itemIdx];
 			$($(".grid-list-item-info")[i]).find(".item-title1").text(obj.title1);
 			$($(".grid-list-item-info")[i]).find(".item-title2").text(obj.title2);
 			$($(".grid-list-item-info")[i]).find(".item-price").text(obj.price);
@@ -344,6 +373,8 @@
 						
 		}	// for end
 	}
+
+	// 스크롤 시 행별 이미지 보여주기 
 	$(window).on("scroll", function(){
 		// 위쪽으로 스크롤된 길이 구하기
 		var scrollTop=$(window).scrollTop();
@@ -356,9 +387,10 @@
 		if(scrollTop>=1170){			
 			showItem(2);	// 3행 이미지 불러오기
 		}
-		console.log("scrollTop : "+scrollTop);
+		//console.log("scrollTop : "+scrollTop);
 	});	
 
+	// 마우스 오버시 이미지 확대 및 테두리 보이기
 	$(".grid-list-item").on("mouseover", function(){
 		$(this).parent().addClass("item-shadow");
 		$(this).find(".item-image").css("transform", "scale(1.1)");
@@ -370,7 +402,7 @@
 
 	//상품 클릭시 상세 페이지 이동
 	$(".grid-list-item a").on("click", function(){
-		console.log("click");
+		//console.log("click");
 		
 		var id=$(this).find(".item-image").attr("id");
 		var index=id.substring(9,12);
@@ -382,8 +414,7 @@
 	function goPage(page){
 		localStorage.aStylePage=page;
 		location.href="itemList.html";
-	};
-
+	}
 </script>
 </body>
 </html>

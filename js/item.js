@@ -102,7 +102,13 @@
 
 	var aStyleItem=localStorage.aStyleItem;		// 선택한 카테고리
 	var itemInfo=undefined;						// 선택한 카테고리의 상품 정보
-
+	var totalPage=2;							// 전체 페이지 수
+	var currentPage=localStorage.aStylePage;	// 현재 페이지
+	if(currentPage==undefined||currentPage==""||currentPage=="0"){
+		currentPage="1";
+	}
+	currentPage=parseInt(currentPage);
+	
 	if(aStyleItem=="outer"){
 		itemInfo=outerInfo;
 	}else if(aStyleItem=="top"){

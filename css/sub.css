@@ -72,3 +72,20 @@
 .blank-line{
   height:50px;
 }
+.grid-list-item-page{
+  margin-left: 180px;
+  font-size: 15px;
+}
+.grid-list-item-page li{
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+.grid-list-item-page-disabled{
+  color: grey;
+}
+.grid-list-item-page-enabled{
+  color: black;
+  cursor: pointer;
+}
