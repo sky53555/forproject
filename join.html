@@ -29,10 +29,14 @@
 		.join_h{
 			border-bottom: 3px solid #333;
 			margin-bottom: 30px ;
+			padding-top: 20px;
 		}
 	</style>
 </head>
 <body>
+<!--TO TOP-->
+<a href="javascript:" id="return-to-top"> <span>TO TOP <i class="fas fa-long-arrow-alt-up"></i> </span></a>
+
 <!--header-->
 <header id="header1">
 	<div id="hwraper">
@@ -302,7 +306,7 @@
 		}
 
 		$("#myForm").on("submit", function(event){
-			alert('sorry');
+			//alert('sorry');
 			event.preventDefault();		// 폼 제출이 막아짐. submit 취소됨
 		});
 
