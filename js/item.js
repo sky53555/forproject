@@ -37,7 +37,12 @@
 		{title1:"Gaia's Ark Tortoise",		title2:"Golden Goose Deluxe",		price:"190,000원"},
 		{title1:"Puffed Sleeve Shirt",		title2:"3.1 Phillip Lim",			price:"310,000원"},
 		{title1:"Bond Bracelet",			title2:"Charlotte Chesnais",		price:"250,000원"},
-		{title1:"Caracol Earcuff",			title2:"Cult Gaia",					price:"140,000원"} ];
+		{title1:"Slava Shirt Voile",		title2:"Thierry Colson",			price:"230,000원"},
+		{title1:"Sandrine Top",				title2:"Ulla Johnson",				price:"150,000원"},
+		{title1:"Caracol Earcuff",			title2:"Cult Gaia",					price:"140,000원"},
+		{title1:"Gaia's Ark Tortoise",		title2:"Golden Goose Deluxe",		price:"190,000원"},
+		{title1:"Puffed Sleeve Shirt",		title2:"3.1 Phillip Lim",			price:"310,000원"},
+		{title1:"Bond Bracelet",			title2:"Charlotte Chesnais",		price:"250,000원"} ];
 
 	var bottomInfo=[
 		{title1:"Brando Pants",				title2:"Ulla Johnson",				price:"280,000원"},
@@ -53,7 +58,6 @@
 		{title1:"turner jeans",				title2:"filles a papa",	price:"90,000원"},
 		{title1:"Sissi Skirt",				title2:"Thierry Colson",			price:"430,000원"},
 		{title1:"Simbad Short",				title2:"Thierry Colson",			price:"250,000원"},
-		{title1:"Gaia's Ark Jade",			title2:"Cult Gaia",					price:"210,000원"},
 		{title1:"Gaia's Ark Tortoise",		title2:"Cult Gaia",					price:"210,000원"},
 		{title1:"Wool Socks Camel",			title2:"CAP Studio",				price:"115,000원"},
 		{title1:"Bond Bracelet",			title2:"Charlotte Chesnais",		price:"250,000원"},
@@ -76,6 +80,8 @@
 		{title1:"Logo Socks",				title2:"Paco Rabanne",				price:"18,000원"},
 		{title1:"Bonsai Bag Mango",			title2:"Simon Miller",				price:"230,000원"},
 		{title1:"Leather Clutch",			title2:"Simon Miller",				price:"110,000원"},
+		{title1:"BONSAI BAG LARGE",			title2:"SIMON MILLER",				price: "350,000원"},
+		{title1:"Rainbow Sequin Pouch",		title2:"Attico",					price:"220,000원"},
 		{title1:"Bond Bracelet",			title2:"Charlotte Chesnais",		price:"250,000원"},
 		{title1:"Caracol Earcuff",			title2:"Cult Gaia",					price:"140,000원"} ];
 
@@ -95,8 +101,6 @@
 		{title1:"Pointy Ballerinas",		title2:"Paco Rabanne",				price: "150,000원"},
 		{title1:"V-Star Sneakers",			title2:"Golden Goose Deluxe Brand",	price:"220,000원"},
 		{title1:"Palma Low Sandals",		title2:"Maryam Nassir Zadeh",		price:"90,000원"},
-		{title1:"Tennis Sneakers",			title2:"Golden Goose Deluxe Brand",	price:"230,000원"},
-		{title1:"Bond Bracelet",			title2:"Charlotte Chesnais",		price:"250,000원"},
 		{title1:"Caracol Earcuff",			title2:"Cult Gaia",					price:"140,000원"} ];
 
 
