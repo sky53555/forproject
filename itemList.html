@@ -256,6 +256,25 @@
 		</div>		<!-- 3행  끝-->
 		<div class="blank-line"></div>
 	</div>
+	<!-- 페이징 -->
+    <ul class="list--inline pagination">
+	  	<li>
+	      <div class="btn btn--secondary btn--narrow btn--disabled btn-prev">
+	        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-left" viewBox="0 0 7.687 11.483"><polygon points="6.346,11.483 7.688,10 2.981,5.741 7.688,1.483 6.346,0 0.001,5.741 "/></svg>
+	        <span class="icon__fallback-text">Previous</span>
+	      </div>    
+	  	</li>
+	  	<li class="pagination__text">
+		    Page 1 of 2
+	  	</li>
+	  	<li>    
+	      <a href="/collections/shoes?page=2" class="btn btn--secondary btn--narrow btn-next">
+	        <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-arrow-right" viewBox="0 0 7.687 11.483"><polygon points="1.342,11.483 0,10 4.706,5.741 0,1.483 1.342,0 7.687,5.741 "/></svg>
+	        <span class="icon__fallback-text">Next</span>
+	      </a>    
+	  	</li>
+	</ul>
+
 
 </div>
 <!--container-->
@@ -359,6 +378,12 @@
 		localStorage.aStyleItemIndex=index;
 		location.href="itemView.html";
 	});
+
+	function goPage(page){
+		localStorage.aStylePage=page;
+		location.href="itemList.html";
+	};
+
 </script>
 </body>
 </html>
