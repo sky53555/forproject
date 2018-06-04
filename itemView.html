@@ -87,22 +87,19 @@
 
       /*mo*/
       .modal-body{
-         margin: 20px 40px;
+         margin: 20px 40px 20px 40px;
       }
 
       table#t01 tr{
          text-align: center;
          height: 40px; 
       }
-
       table#t01 tr>td:nth-child(1){
          text-align: left;
       }
-
       table#t01 tr:nth-child(even) {
          background-color: #fff;   
       }
-
       table#t01 tr:nth-child(odd) {
        background-color: #eee;
       }  
@@ -115,9 +112,14 @@
          background-color: rgb(249,234,206);
       }
 
+      .likedBtn{
+         background-color: rgb(249,234,206);
+      }
+
       #itemCont{
          padding: 50px 0;
       }
+
    </style>
 </head>
 
@@ -272,18 +274,19 @@
          <br>
          <div>The following charts will help you match the desinger's size scheme for this projuct(indicated in the dropdown)to your usual size.</div>
          <br>
-           <table id="t01" border="0" cellspacing="0" style="width: 100%">
+           <table  id="t01" border="0" cellspacing="0" style="width: 100%">
              <caption>READY TO WEAR SIZE CHART</caption>
             <tbody>
                <colgroup>
-                   <col width="50px" />
-                   <col width="10px" />
-                   <col width="10px" />
-                   <col width="10px" />
-                   <col width="10px" />
-                   <col width="10px" />
-                   <col width="10px" />
-                   <col width="10px" /> 
+                   <col width="10" />
+                   <col width="10" />
+                   <col width="10" />
+                   <col width="10" />
+                   <col width="10" />
+                   <col width="10" />
+                   <col width="10" />
+                   <col width="10" />
+                   
                 </colgroup>
                <tr>
                   <td>French/European sizing</td>
@@ -356,6 +359,7 @@
  -->
 <!--container-->
 
+
 <!--footer-->
 <footer id="footer1">
    <div id="fwarper">
@@ -394,9 +398,14 @@
       {title1:"Wool Socks Camel",         title2:"CAP Studio",            price:"15,000원"},
       {title1:"Logo Socks",            title2:"Paco Rabanne",            price:"18,000원"} ];
 
-   // 이미지 띄우기
+   // 상품 카테고리
    var aStyleItem=localStorage.aStyleItem;
-   $("#itemImgDiv>img").attr("src","image/"+aStyleItem +"/0"+(aStyleItemIndex+1)+".jpg")
+   // 상품 인덱스 번호
+   var aStyleItemIndex=parseInt(localStorage.aStyleItemIndex);
+   // 이미지 출력
+   var imageNm="0"+(aStyleItemIndex+1);
+   imageNm=imageNm.substring(imageNm.length-2, imageNm.length)+".jpg";
+   $("#itemImgDiv>img").attr("src","image/"+aStyleItem+"/"+imageNm);
 
    // 상품 정보를 저장하는 변수
    var itemN=itemInfo[aStyleItemIndex].title1;
@@ -406,32 +415,54 @@
    $("#brandName").text(brandN);
    $("#itemName").text(itemN);
    $("#price").text(price);
+   // localStorage에 저장된 aStyleSaveList를 가져옴
+   var saveList=localStorage.aStyleSaveList;
+   if (saveList==undefined||saveList==""){
+      saveList="[]";
+   }
+   // localStorage에 저장 된 좋아요 리스트를 담은 배열
+   var arr=JSON.parse(saveList);
+   // 좋아요 버튼 클릭한 이력을 확인
+   checkLiked();
+
+   // 상품에 좋아요 이력이 있으면 버튼색을 바꿔주는 함수
+   function checkLiked(){
+      var isLiked=!checkLikeList(arr);
+      if(isLiked){
+         $("#likeBtn").addClass("likedBtn");
+      }
+   }
+
+   // 좋아요 중복시 해당 상품의 인덱스를 담는 변수
+   var arrIndex;
 
    // 좋아요 버튼 클릭 
-   $("#likeBtn").click(function(event){
-      var saveList=localStorage.aStyleSaveList;
-      if (saveList==undefined||saveList==""){
-         saveList="[]";
-      }
-
-      // localStorage에 저장 된 좋아요 리스트를 담은 배열
-      var arr=JSON.parse(saveList);
-
+   $("#likeBtn").click(function(event){  
       // 중복 체크
       var isOnly=checkLikeList(arr);
       if(isOnly){
+         // 최초 클릭시 localStorage에 상품의 정보를 담고 버튼색을 바꿔준다.
          arr.push({Item:aStyleItem, ItemIndex:aStyleItemIndex});
-         saveList=JSON.stringify(arr);
-         localStorage.aStyleSaveList=saveList;
-      };
+         $(this).addClass("likedBtn");
+      } else{
+         // 좋아요 취소시
+         arr.splice(arrIndex,1);
+         $(this).removeClass("likedBtn");
+      }
+      saveList=JSON.stringify(arr);
+      localStorage.aStyleSaveList=saveList;
       event.preventDefault(); 
    })
-
+   
    // 좋아요 상품 중복 체크 함수
    function checkLikeList(arr){
       for(var i=0; i<arr.length; i++){
-         if(arr[i].ItemIndex==aStyleItemIndex){
-            return false;
+         // 상품의 카테고리명과 인덱스번호가 같으면 false를 반환
+         if(arr[i].Item==aStyleItem){
+            if(arr[i].ItemIndex==aStyleItemIndex){
+               arrIndex=i;
+               return false;
+            } 
          } 
       }
       return true;

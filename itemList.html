@@ -363,6 +363,17 @@
 		localStorage.aStyleItem=arg;
 		location.href="itemList.html";
 	};
+
+	//상품 클릭시 상세 페이지 이동
+   	$(".grid-list-item a").on("click", function(){
+	  console.log("click");
+	  
+	  var id=$(this).find(".item-image").attr("id");
+	  var index=id.substring(9,12);
+	  //console.log("id:"+id+ " / index :" + index);
+	  localStorage.aStyleItemIndex=index;
+	  location.href="itemView.html";
+   });
 </script>
 </body>
 </html>
