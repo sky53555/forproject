@@ -394,6 +394,7 @@
 
 	// ====  페이지 로딩시 처리 start ====
 	// 카테고리 이미지
+	var isMenuImage=false;
 	$("#sub-menu-image")	
 	.hide()
 	.attr("src", "image/"+aStyleItem+"/00.png")
@@ -404,7 +405,25 @@
 	 	$("#sub-menu-category-image")
 		.attr("src", "image/"+aStyleItem+"/t00.png")
 		.css("left", "15%").fadeIn();
+		isMenuImage=true;
 	});
+
+	if(!isMenuImage){
+		var interval1 = setInterval(showMenuImage, 1000);
+		function showMenuImage() {
+			console.log("interval - " + isMenuImage);
+			if(!isMenuImage){
+				console.log("interval -2");
+			 	$("#sub-menu-category-image")
+				.attr("src", "image/"+aStyleItem+"/t00.png")
+				.css("left", "15%").fadeIn();
+				isMenuImage=true;
+				clearInterval(interval1);
+			} else {
+				clearInterval(interval1);
+			}
+		};
+	}
 
 	// 전체 행 계산해서 
 	var itemRow1=true;
