@@ -74,8 +74,8 @@
 	</div>
 	<div class="clearfix"></div>
 	<div id="itemRowTop" class="blank-line"></div>
+	<div class="grid-list">
 	<!--상품-->
-	<div class="list">		
 		<!-- 1 행 -->
 		<div class="row grid-list-item-row1">
 			<div class="col-xs-6 col-sm-3">			
@@ -314,6 +314,14 @@
 		}		
 	});
 
+	var isInit=true;
+	// 전체 행 계산해서 
+	var itemRow1=true;
+	var itemRow2=true;
+	var itemRow3=true;
+	// 상품목록 list 복제
+	var cloneRowOrg = $('.grid-list').clone();
+
 	// 아이템 행별 보여주기
 	var imageLoad=[false, false, false];
 	
@@ -322,13 +330,21 @@
 			return;
 		}
 
+		if(row==0){
+			var cloneRow = $(cloneRowOrg).clone();
+			console.log(cloneRow);
+			$(".grid-list").remove();
+			cloneRow.prependTo('.grid-list-item-page');
+		}
+
 		imageLoad[row]=true;
 		var start=row*4;
 		var itemIdx=start+((currentPage-1)*12)-1;
-		console.log("start :" + start);
+		console.log($(".grid-list-item-info"));
+
 		for (var i=start;i<start+4;i++){
-			//console.log("i :"+i+"// .grid-list-item-image).length" + $(".grid-list-item-image").length)
-			itemIdx++;			
+			//console.log("i :"+i+"// .grid-list-item-image).length" + $(".grid-list-item-image").length);
+			itemIdx++;
 			if(itemIdx>=$(itemInfo).length){
 				return;
 			}
@@ -338,7 +354,7 @@
 			imageNm=imageNm.substring(imageNm.length-2, imageNm.length)+".jpg";
 			//console.log("imageNm : " + imageNm);
 			$($(".grid-list-item-image")[i]).find(".item-image").attr("src", "image/"+aStyleItem+"/"+imageNm).attr("id", "itemIndex"+itemIdx);
-			
+
 			var obj=itemInfo[itemIdx];
 			$($(".grid-list-item-info")[i]).find(".item-title1").text(obj.title1.toUpperCase());
 			$($(".grid-list-item-info")[i]).find(".item-title2").text(obj.title2.toUpperCase());
@@ -392,17 +408,18 @@
 	});	
 
 	// 마우스 오버시 이미지 확대 및 테두리 보이기
-	$(".grid-list-item").on("mouseover", function(){
+	$(document).on("mouseover", ".grid-list-item", function(){     
 		$(this).parent().addClass("item-shadow");
 		$(this).find(".item-image").css("transform", "scale(1.1)");
 	});
-	$(".grid-list-item").on("mouseout", function(){
+	$(document).on("mouseout", ".grid-list-item", function(){     
 		$(this).parent().removeClass("item-shadow");
 		$(this).find(".item-image").css("transform", "scale(1");
 	});
 
 	//상품 클릭시 상세 페이지 이동
-	$(".grid-list-item a").on("click", function(){
+	$(document).on("click", ".grid-list-item a", function(){     
+
 		//console.log("click");
 		
 		var id=$(this).find(".item-image").attr("id");
@@ -413,9 +430,70 @@
 	});
 
 	function goPage(page){
+		imageLoad=[false, false, false];		
+		currentPage=page;
 		localStorage.aStylePage=page;
-		localStorage.aStylePaging="1";
-		location.href="itemList.html";
+		if(!isInit){
+			showItem(0);
+		}
+		itemRow1=true;
+		itemRow2=true;
+		itemRow3=true;
+		if(currentPage==totalPage){
+			var itemCnt=((currentPage-1)*12);
+			if(itemCnt>itemInfo.length){
+				itemRow1=false;
+				itemRow2=false;
+				itemRow3=false;
+			}else if((itemCnt+4)>=itemInfo.length){
+				itemRow2=false;
+				itemRow3=false;
+			}else if((itemCnt+8)>=itemInfo.length){
+				itemRow3=false;
+			}
+
+			//console.log(currentPage+"="+itemRow1 +"="+itemRow2 +"="+itemRow3 +"=");
+			if(!itemRow1){
+				$(".grid-list-item-row1").hide();
+			}
+			if(!itemRow2){
+				$(".grid-list-item-row2").hide();
+			}
+			if(!itemRow3){
+				$(".grid-list-item-row3").hide();
+			}
+		}
+
+		// 페이징 처리
+		//console.log(currentPage+"="+totalPage);
+		$(".grid-list-item-page li").removeClass("grid-list-item-page-enabled");
+
+		if(totalPage>1){
+			//$(".grid-list-item-page").show();
+			$($(".grid-list-item-page li")[1]).text("Page "+currentPage+" of "+totalPage);
+
+			// prev page
+			if(currentPage>1){
+				$($(".grid-list-item-page li")[0]).addClass("grid-list-item-page-enabled");		
+			}else{
+				$($(".grid-list-item-page li")[0]).addClass("grid-list-item-page-disabled");					
+			}
+			// next page
+			if(currentPage<totalPage){
+				$($(".grid-list-item-page li")[2]).addClass("grid-list-item-page-enabled");
+			}else{
+				$($(".grid-list-item-page li")[2]).addClass("grid-list-item-page-disabled");					
+			}
+		} else {
+			$(".grid-list-item-page").remove();
+		}
+
+		if(!isInit){
+			location.href="#";
+			location.href="#itemRowTop";
+		}else{
+			isInit=false;
+		}
 	}
 
 	// ====  페이지 로딩시 처리 start ====
@@ -434,6 +512,7 @@
 		isMenuImage=true;
 	});
 
+	// transitioned event 처리 안되는 경우가 발생해서 임의로 처리
 	if(!isMenuImage){
 		var interval1 = setInterval(showMenuImage, 1000);
 		function showMenuImage() {
@@ -451,67 +530,10 @@
 		};
 	}
 
-	// 전체 행 계산해서 
-	var itemRow1=true;
-	var itemRow2=true;
-	var itemRow3=true;
-
-	if(currentPage==totalPage){
-		var itemCnt=((currentPage-1)*12);
-		if(itemCnt>itemInfo.length){
-			itemRow1=false;
-			itemRow2=false;
-			itemRow3=false;
-		}else if((itemCnt+4)>=itemInfo.length){
-			itemRow2=false;
-			itemRow3=false;
-		}else if((itemCnt+8)>=itemInfo.length){
-			itemRow3=false;
-		}
-
-		console.log(currentPage+"="+itemRow1 +"="+itemRow2 +"="+itemRow3 +"=");
-		if(!itemRow1){
-			$(".grid-list-item-row1").remove();
-		}
-		if(!itemRow2){
-			$(".grid-list-item-row2").remove();
-		}
-		if(!itemRow3){
-			$(".grid-list-item-row3").remove();
-		}
-	}
-
-	// 페이징 처리
-	//console.log(currentPage+"="+totalPage);
-	if(totalPage>1){
-		$($(".grid-list-item-page li")[1]).text("Page "+currentPage+" of "+totalPage);
-
-		// prev page
-		if(currentPage>1){
-			$($(".grid-list-item-page li")[0]).addClass("grid-list-item-page-enabled");		
-		}else{
-			$($(".grid-list-item-page li")[0]).addClass("grid-list-item-page-disabled");					
-		}
-		// next page
-		if(currentPage<totalPage){
-			$($(".grid-list-item-page li")[2]).addClass("grid-list-item-page-enabled");
-		}else{
-			$($(".grid-list-item-page li")[2]).addClass("grid-list-item-page-disabled");					
-		}
-	} else {
-		$(".grid-list-item-page").remove();
-	}
 
 	// 윈도우 scroll 이벤트 발생
+	goPage(currentPage);
 	$(window).trigger('scroll');
-
-	//페이징 시 아이템 첫행으로 anchor 이동
-	var aStylePaging=localStorage.aStylePaging;
-	if(aStylePaging=="1"){
-		location.href="#itemRowTop";
-	}
-	localStorage.aStylePaging="0";
-
 	// ====  페이지 로딩시 처리 end  ====
 
 </script>
