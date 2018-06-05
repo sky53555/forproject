@@ -332,7 +332,6 @@
 
 		if(row==0){
 			var cloneRow = $(cloneRowOrg).clone();
-			console.log(cloneRow);
 			$(".grid-list").remove();
 			cloneRow.prependTo('.grid-list-item-page');
 		}
@@ -340,8 +339,7 @@
 		imageLoad[row]=true;
 		var start=row*4;
 		var itemIdx=start+((currentPage-1)*12)-1;
-		console.log($(".grid-list-item-info"));
-
+		
 		for (var i=start;i<start+4;i++){
 			//console.log("i :"+i+"// .grid-list-item-image).length" + $(".grid-list-item-image").length);
 			itemIdx++;
@@ -382,7 +380,7 @@
 		var scrollTop=$(window).scrollTop();
 		var width=$(window).width();
 
-		console.log("scrollTop : "+scrollTop +" / width : " +width);
+		//console.log("scrollTop : "+scrollTop +" / width : " +width);
 		if(width>750){
 			if(itemRow1&&scrollTop>=120){
 				showItem(0);
