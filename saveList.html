@@ -192,8 +192,8 @@
          })
          $("#"+i).removeClass("tbody-tr");
          $("#"+i).find(".itme-img").attr("src","image/"+arr[i].Item +"/"+imageNm);
-         $("#"+i).find(".item-title1").text(itemInfo[arr[i].ItemIndex].title1);
-         $("#"+i).find(".item-title2").text(itemInfo[arr[i].ItemIndex].title2);
+         $("#"+i).find(".item-title1").text(itemInfo[arr[i].ItemIndex].title1.toUpperCase());
+         $("#"+i).find(".item-title2").text(itemInfo[arr[i].ItemIndex].title2.toUpperCase());
          $("#"+i).find("#item-price").text(itemInfo[arr[i].ItemIndex].price);       
 
       }

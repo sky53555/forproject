@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>A style</title>
+	<link rel="stylesheet" href="css/main.css"/>
+	<link rel="stylesheet" href="css/media.css"/>
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/sub.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+</head>
+
+<body>
+<!--TO TOP-->
+<a href="javascript:" id="return-to-top"> <span>TO TOP <i class="fas fa-long-arrow-alt-up"></i> </span></a>
+
+<!--header-->
+<header id="header1">
+	<div id="hwraper">
+
+		<h1 id="logo">
+		<a href="index.html"><img src="image/etc/logo.png" alt="logo"></a>
+		</h1>
+		<ul id="hnavi">
+			<li><a href="javascript:goList('outer')" class="cool-link">OUTER</a></li>
+			<li><a href="javascript:goList('top')" class="cool-link">TOP</a></li>
+			<li><a href="javascript:goList('bottom')" class="cool-link">BOTTOM</a></li>
+			<li><a href="javascript:goList('acc')" class="cool-link">ACC</a></li>
+			<li><a href="javascript:goList('shoes')" class="cool-link">SHOES</a></li>           
+		</ul>
+
+		<!--media toggle:hidden now-->
+		<div id="mediaTog">
+  			<label>
+  			<input id="mediaCheck" type='checkbox'>
+ 				<span class='menu'>
+    				<span class='hamburger'></span>
+  				</span>
+ 			<ul id="labelul">
+				<li><a href="javascript:goList('outer')">OUTER</a></li>
+				<li><a href="javascript:goList('top')">TOP</a></li>
+				<li><a href="javascript:goList('bottom')">BOTTOM</a></li>
+				<li><a href="javascript:goList('acc')">ACC</a></li>
+				<li><a href="javascript:goList('shoes')">SHOES</a></li>
+			</ul>
+    		</label>
+		</div>
+		
+		<div class="search" >				
+			<span class="searchbox">	
+		    <input type="search" placeholder="Search..." />
+			</span>
+			<i class="fa fa-search" style="font-size:1.7em; color:Tomato"></i>				
+		</div>
+
+		<div id="icon" style="font-size:1.5em;">	
+			<a href="saveList.html"><i class="far fa-heart"></i></a>
+			<a href="login.html"><i class="far fa-user-circle"></i></a>
+		</div>
+
+	</div>
+</header>
+
+<!--container-->
+<div class="container">
+	<!--글과 그림 애니메이션-->
+	<div class="row sub-menu">
+		<img id="sub-menu-category-image" src="image/acc/t00.png">
+		<img id="sub-menu-image" src="image/acc/00.png">
+	</div>
+	<div class="clearfix"></div>
+	<div id="itemRowTop" class="blank-line"></div>
+	<!--상품-->
+	<div class="list">
+		<!-- 1 행 -->
+		<div class="row grid-list-item-row1">
+			<div class="col-xs-6 col-sm-3">			
+				<div class="grid-list-item grid-list-item-view1">
+					<a href="#">
+						<div class="grid-list-item-image">
+							<img class="item-image">
+						</div>
+						<div class="grid-list-item-info">
+							<p class="item-title1"></p>
+							<span class="item-title2"></span>
+							<span class="item-price"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3">			
+				<div class="grid-list-item grid-list-item-view2">
+					<a href="#">
+						<div class="grid-list-item-image">
+							<img class="item-image">
+						</div>
+						<div class="grid-list-item-info">
+							<p class="item-title1"></p>
+							<span class="item-title2"></span>
+							<span class="item-price"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3">			
+				<div class="grid-list-item grid-list-item-view3">
+					<a href="#">
+						<div class="grid-list-item-image">
+							<img class="item-image">
+						</div>
+						<div class="grid-list-item-info">
+							<p class="item-title1"></p>
+							<span class="item-title2"></span>
+							<span class="item-price"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3">			
+				<div class="grid-list-item grid-list-item-view4">
+					<a href="#">
+						<div class="grid-list-item-image">
+							<img class="item-image">
+						</div>
+						<div class="grid-list-item-info">
+							<p class="item-title1"></p>
+							<span class="item-title2"></span>
+							<span class="item-price"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>		<!-- 1행  끝-->
+		<div class="blank-line"></div>
+
+		<!-- 2 행 -->
+		<div class="row  grid-list-item-row2">
+			<div class="col-xs-6 col-sm-3">			
+				<div class="grid-list-item grid-list-item-view1">
+					<a href="#">
+						<div class="grid-list-item-image">
+							<img class="item-image">
+						</div>
+						<div class="grid-list-item-info">
+							<p class="item-title1"></p>
+							<span class="item-title2"></span>
+							<span class="item-price"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3">			
+				<div class="grid-list-item grid-list-item-view2">
+					<a href="#">
+						<div class="grid-list-item-image">
+							<img class="item-image">
+						</div>
+						<div class="grid-list-item-info">
+							<p class="item-title1"></p>
+							<span class="item-title2"></span>
+							<span class="item-price"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3">			
+				<div class="grid-list-item grid-list-item-view3">
+					<a href="#">
+						<div class="grid-list-item-image">
+							<img class="item-image">
+						</div>
+						<div class="grid-list-item-info">
+							<p class="item-title1"></p>
+							<span class="item-title2"></span>
+							<span class="item-price"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3">			
+				<div class="grid-list-item grid-list-item-view4">
+					<a href="#">
+						<div class="grid-list-item-image">
+							<img class="item-image">
+						</div>
+						<div class="grid-list-item-info">
+							<p class="item-title1"></p>
+							<span class="item-title2"></span>
+							<span class="item-price"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>		<!-- 2행  끝-->
+		<div class="blank-line"></div>
+
+		<!-- 3 행 -->
+		<div class="row grid-list-item-row3">
+			<div class="col-xs-6 col-sm-3">			
+				<div class="grid-list-item grid-list-item-view1">
+					<a href="#">
+						<div class="grid-list-item-image">
+							<img class="item-image">
+						</div>
+						<div class="grid-list-item-info">
+							<p class="item-title1"></p>
+							<span class="item-title2"></span>
+							<span class="item-price"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3">			
+				<div class="grid-list-item grid-list-item-view2">
+					<a href="#">
+						<div class="grid-list-item-image">
+							<img class="item-image">
+						</div>
+						<div class="grid-list-item-info">
+							<p class="item-title1"></p>
+							<span class="item-title2"></span>
+							<span class="item-price"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3">			
+				<div class="grid-list-item grid-list-item-view3">
+					<a href="#">
+						<div class="grid-list-item-image">
+							<img class="item-image">
+						</div>
+						<div class="grid-list-item-info">
+							<p class="item-title1"></p>
+							<span class="item-title2"></span>
+							<span class="item-price"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-xs-6 col-sm-3">			
+				<div class="grid-list-item grid-list-item-view4">
+					<a href="#">
+						<div class="grid-list-item-image">
+							<img class="item-image">
+						</div>
+						<div class="grid-list-item-info">
+							<p class="item-title1"></p>
+							<span class="item-title2"></span>
+							<span class="item-price"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>		<!-- 3행  끝-->
+		<div class="blank-line"></div>
+	</div>
+	
+	<!-- 페이징 -->
+	<div class="row grid-list-item-page">
+		<div class="col-xs-4 col-sm-5"></div>
+		<div class="col-xs-5 col-sm-4">
+			<ul>
+				<li>
+					<span class="fas fa-arrow-left"></span>
+				</li>
+				<li></li>
+				<li>
+					<span class="fas fa-arrow-right"></span>
+				</li>
+			</ul>
+		</div>
+		<div class="col-xs-3 col-sm-3"></div>
+		<div class="blank-line"></div>
+	</div>
+</div>
+<!--container-->
+<!--footer-->
+<footer id="footer1">
+	<div id="fwarper">
+		<ul id="lists">
+			<li><a href="aboutus.html">About us</a></li>
+			<li><a href="#">Shipping Information</a></li>
+			<li><a href="#">Return & Exchanges</a></li>
+		</ul>
+
+		<div id="btn">
+			<p><a href="contact.html">CONTACT & HELP</a></p>
+			<p><a href="#">FOLLOW US</a></p>
+		</div>
+
+	</div>
+</footer>
+<!--end of footer-->
+
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/bootstrap.js"></script>	
+<script src="js/astyle.js"></script>	
+<script src="js/item.js"></script>	
+<script>
+	// 페이지 이동 처리
+	$(".grid-list-item-page .fa-arrow-right").click(function(){
+		if($(this).parent().hasClass("grid-list-item-page-enabled")){
+			goPage(currentPage+1);
+		}		
+	});
+	$(".grid-list-item-page .fa-arrow-left").click(function(){
+		if($(this).parent().hasClass("grid-list-item-page-enabled")){
+			goPage(currentPage-1);
+		}		
+	});
+
+	var isInit=true;
+	// 전체 행 계산해서 
+	var itemRow1=true;
+	var itemRow2=true;
+	var itemRow3=true;
+
+	// 아이템 행별 보여주기
+	var imageLoad=[false, false, false];
+	
+	function showItem(row){
+		if(imageLoad[row]){
+			return;
+		}
+
+		// 첫행 인경우, 2,3행 clear
+
+		if(row==0){			
+			$(".grid-list-item-image .item-image").attr("src", "");
+			$(".grid-list-item-info .item-title1").text("");
+			$(".grid-list-item-info .item-title2").text("");
+			$(".grid-list-item-info .item-price").text("");
+			$(".grid-list-item-row1").show();
+			$(".grid-list-item-row2").show();
+			$(".grid-list-item-row3").show();
+		}
+
+		imageLoad[row]=true;
+		var start=row*4;
+		var itemIdx=start+((currentPage-1)*12)-1;
+		//console.log("start :" + start);
+
+		for (var i=start;i<start+4;i++){
+			//console.log("i :"+i+"// .grid-list-item-image).length" + $(".grid-list-item-image").length)
+			itemIdx++;
+			if(itemIdx>=$(itemInfo).length){
+				return;
+			}
+			$($(".grid-list-item")[i]).hide();
+
+			var imageNm="0"+(itemIdx+1);
+			imageNm=imageNm.substring(imageNm.length-2, imageNm.length)+".jpg";
+			//console.log("imageNm : " + imageNm);
+			// $($(".grid-list-item-image")[i]).find(".item-image").attr("src", "image/"+aStyleItem+"/"+imageNm).attr("id", "itemIndex"+itemIdx);
+			// if(i%4==0){
+			// 	$($(".grid-list-item")[i]).removeClass("grid-list-item-view1").addClass("grid-list-item-view1");
+			// }
+			// if(i%4==1){
+			// 	$($(".grid-list-item")[i]).removeClass("grid-list-item-view2").addClass("grid-list-item-view2");
+			// }
+			// if(i%4==2){
+			// 	$($(".grid-list-item")[i]).removeClass("grid-list-item-view3").addClass("grid-list-item-view3");
+			// }
+			// if(i%4==3){
+			// 	$($(".grid-list-item")[i]).removeClass("grid-list-item-view4").addClass("grid-list-item-view4");
+			}
+			var obj=itemInfo[itemIdx];
+			$($(".grid-list-item-info")[i]).find(".item-title1").text(obj.title1.toUpperCase());
+			$($(".grid-list-item-info")[i]).find(".item-title2").text(obj.title2.toUpperCase());
+			$($(".grid-list-item-info")[i]).find(".item-price").text(obj.price);
+
+			$($(".grid-list-item")[i]).css("margin-top","10px").fadeIn();
+						
+		}	// for end
+	}
+
+	$(window).on("resize", function(){		// = $(window).resize(function(){});
+		// 창의 폭과 높이 얻어오기
+		var width=$(this).width();
+		if(width<750){
+			$(window).trigger('scroll');
+		}
+		
+	});
+
+
+	// 스크롤 시 행별 이미지 보여주기 
+	$(window).on("scroll", function(){
+
+		// 위쪽으로 스크롤된 길이 구하기
+		var scrollTop=$(window).scrollTop();
+		var width=$(window).width();
+
+		//console.log("scrollTop : "+scrollTop +" / width : " +width);
+		if(width>750){
+			if(itemRow1&&scrollTop>=120){
+				showItem(0);
+			}
+			if(itemRow2&&scrollTop>=690){
+				showItem(1);	// 2행 이미지 불러오기
+			}
+			if(itemRow3&&scrollTop>=1170){			
+				showItem(2);	// 3행 이미지 불러오기
+			}
+		}else{
+			if(itemRow1){
+				showItem(0);
+			}
+			if(itemRow2&&scrollTop>=690){
+				showItem(1);	// 2행 이미지 불러오기
+			}
+			if(itemRow3&&scrollTop>=1170){			
+				showItem(2);	// 3행 이미지 불러오기
+			}			
+		}
+		
+	});	
+
+	// 마우스 오버시 이미지 확대 및 테두리 보이기
+	$(".grid-list-item").on("mouseover", function(){
+		$(this).parent().addClass("item-shadow");
+		$(this).find(".item-image").css("transform", "scale(1.1)");
+	});
+	$(".grid-list-item").on("mouseout", function(){
+		$(this).parent().removeClass("item-shadow");
+		$(this).find(".item-image").css("transform", "scale(1");
+	});
+
+	//상품 클릭시 상세 페이지 이동
+	$(".grid-list-item a").on("click", function(){
+		//console.log("click");
+		
+		var id=$(this).find(".item-image").attr("id");
+		var index=id.substring(9,12);
+		//console.log("id:"+id+ " / index :" + index);
+		localStorage.aStyleItemIndex=index;
+		location.href="itemView.html";
+	});
+
+	function goPage(page){
+		imageLoad=[false, false, false];
+		currentPage=page;
+		localStorage.aStylePage=page;
+		showItem(0);
+
+		itemRow1=true;
+		itemRow2=true;
+		itemRow3=true;
+		if(currentPage==totalPage){
+			var itemCnt=((currentPage-1)*12);
+			if(itemCnt>itemInfo.length){
+				itemRow1=false;
+				itemRow2=false;
+				itemRow3=false;
+			}else if((itemCnt+4)>=itemInfo.length){
+				itemRow2=false;
+				itemRow3=false;
+			}else if((itemCnt+8)>=itemInfo.length){
+				itemRow3=false;
+			}
+
+			//console.log(currentPage+"="+itemRow1 +"="+itemRow2 +"="+itemRow3 +"=");
+			if(!itemRow1){
+				$(".grid-list-item-row1").hide();
+			}
+			if(!itemRow2){
+				$(".grid-list-item-row2").hide();
+			}
+			if(!itemRow3){
+				$(".grid-list-item-row3").hide();
+			}
+		}
+
+		// 페이징 처리
+		console.log(currentPage+"="+totalPage);
+		if(totalPage>1){
+			//$(".grid-list-item-page").show();
+			$($(".grid-list-item-page li")[1]).text("Page "+currentPage+" of "+totalPage);
+
+			// prev page
+			if(currentPage>1){
+				$($(".grid-list-item-page li")[0]).addClass("grid-list-item-page-enabled");		
+			}else{
+				$($(".grid-list-item-page li")[0]).addClass("grid-list-item-page-disabled");					
+			}
+			// next page
+			if(currentPage<totalPage){
+				$($(".grid-list-item-page li")[2]).addClass("grid-list-item-page-enabled");
+			}else{
+				$($(".grid-list-item-page li")[2]).addClass("grid-list-item-page-disabled");					
+			}
+		} else {
+			$(".grid-list-item-page").remove();
+		}
+
+		if(!isInit){
+			location.href="#";
+			location.href="#itemRowTop";
+		} else{
+			isInit=false;
+		}
+	}
+
+	// ====  페이지 로딩시 처리 start ====
+	// 카테고리 이미지
+	var isMenuImage=false;
+	$("#sub-menu-image")	
+	.hide()
+	.attr("src", "image/"+aStyleItem+"/00.png")
+	.css("left", "20%")
+	.fadeIn()
+	.one("transitionend", function(){
+		//console.log("transitionend");
+	 	$("#sub-menu-category-image")
+		.attr("src", "image/"+aStyleItem+"/t00.png")
+		.css("left", "15%").fadeIn();
+		isMenuImage=true;
+	});
+
+	if(!isMenuImage){
+		var interval1 = setInterval(showMenuImage, 1000);
+		function showMenuImage() {
+			//console.log("interval - " + isMenuImage);
+			if(!isMenuImage){
+				//console.log("interval -2");
+			 	$("#sub-menu-category-image")
+				.attr("src", "image/"+aStyleItem+"/t00.png")
+				.css("left", "15%").fadeIn();
+				isMenuImage=true;
+				clearInterval(interval1);
+			} else {
+				clearInterval(interval1);
+			}
+		};
+	}
+
+
+	// 윈도우 scroll 이벤트 발생
+	$(window).trigger('scroll');
+	goPage(currentPage);	
+	// ====  페이지 로딩시 처리 end  ====
+
+</script>
+</body>
+</html>
